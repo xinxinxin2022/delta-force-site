@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delta Force: Hawk Ops Guide 2026 — Weapons, Operators, Maps & Tips</title>
+  <meta name="description" content="Complete Delta Force: Hawk Ops guide for 2026. Master Havoc extraction, All-Out Warfare, all operators (Red Wolf, Weilong, Silver Wing, Hive Medic), meta weapons, maps, economy tips, and beginner strategies.">
+  <meta name="keywords" content="Delta Force Hawk Ops, Delta Force guide, Hawk Ops 2026, Havoc extraction guide, All-Out Warfare, Red Wolf operator, Weilong operator, Silver Wing, Hive Medic, weapon tier list, map guides, Delta Force tips, beginner guide, economy guide">
+  <meta name="author" content="Delta Force Hawk Ops Guide">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://example.github.io/delta-force-hawk-ops-guide/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.github.io/delta-force-hawk-ops-guide/">
+  <meta property="og:title" content="Delta Force: Hawk Ops Guide 2026 — Weapons, Operators, Maps & Tips">
+  <meta property="og:description" content="Your complete guide to Delta Force: Hawk Ops. Master every operator, weapon, map, and game mode with up-to-date strategies for Season 7/8.">
+  <meta property="og:site_name" content="Delta Force Hawk Ops Guide">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://example.github.io/delta-force-hawk-ops-guide/">
+  <meta name="twitter:title" content="Delta Force: Hawk Ops Guide 2026">
+  <meta name="twitter:description" content="Complete Delta Force: Hawk Ops guide — operators, weapons, maps, game modes, economy tips, and beginner strategies for Season 7/8.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23f59e0b' width='100' height='100' rx='20'/><text x='50' y='70' font-size='60' text-anchor='middle' fill='%230a0e17' font-weight='900'>DF</text></svg>">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Delta Force Hawk Ops Guide",
+    "url": "https://example.github.io/delta-force-hawk-ops-guide/",
+    "description": "Complete Delta Force: Hawk Ops guide for 2026 covering operators, weapons, maps, game modes, and beginner tips.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://example.github.io/delta-force-hawk-ops-guide/?s={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <span class="logo-icon">DF</span>
+        <span>Hawk Ops Guide</span>
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="active" data-en="Home" data-zh="首页">Home</a></li>
+          <li><a href="modes.html" data-en="Game Modes" data-zh="游戏模式">Game Modes</a></li>
+          <li><a href="operators.html" data-en="Operators" data-zh="干员">Operators</a></li>
+          <li><a href="weapons.html" data-en="Weapons" data-zh="武器">Weapons</a></li>
+          <li><a href="maps.html" data-en="Maps" data-zh="地图">Maps</a></li>
+          <li><a href="about.html" data-en="About" data-zh="关于">About</a></li>
+          <li><button class="lang-toggle" id="langToggle" title="切换中文/English">EN / 中</button></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero">
+    <img src="images/hero-bg.jpg" alt="" class="hero-bg-img" aria-hidden="true">
+    <canvas class="hero-canvas"></canvas>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge">Season 7/8 Updated</span>
+      <h1 class="hero-title">Delta Force: Hawk Ops Complete Guide</h1>
+      <p class="hero-subtitle">Your definitive resource for mastering every operator, weapon, map, and game mode. Up-to-date strategies for Havoc extraction and All-Out Warfare in 2026.</p>
+      <div class="hero-cta">
+        <a href="#articles" class="btn btn-primary">Browse Guides</a>
+        <a href="articles/delta-force-hawk-ops-complete-guide.html" class="btn btn-secondary">Getting Started</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SEARCH BAR ========== -->
+  <section class="section" style="padding-top: var(--space-2xl);">
+    <div class="container">
+      <div class="search-bar">
+        <span class="search-icon">🔎</span>
+        <input type="text" placeholder="Search guides — operators, weapons, maps...">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FILTER BAR ========== -->
+  <section class="container" id="articles">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="cat-mode">Game Modes</button>
+      <button class="filter-btn" data-filter="cat-operator">Operators</button>
+      <button class="filter-btn" data-filter="cat-weapon">Weapons</button>
+      <button class="filter-btn" data-filter="cat-map">Maps</button>
+      <button class="filter-btn" data-filter="cat-economy">Economy</button>
+      <button class="filter-btn" data-filter="cat-beginner">Beginner</button>
+    </div>
+
+    <!-- ========== ADSENSE SLOT ========== -->
+    <div class="ad-slot">
+      <div>
+        <div class="ad-slot-label">Advertisement</div>
+        <!-- Google AdSense Ad Unit -->
+        <!-- <ins class="adsbygoogle" ...></ins> -->
+      </div>
+    </div>
+
+    <!-- ========== ARTICLES GRID ========== -->
+    <div class="articles-grid">
+
+      <!-- Card 1: Complete Guide -->
+      <article class="article-card" data-category="cat-overview">
+        <img class="card-image-real" src="images/cover-overview.jpg" alt="Delta Force Hawk Ops Complete Guide" loading="lazy">
+        <div class="card-body">
+          <span class="card-category cat-overview">Overview</span>
+          <h3 class="card-title"><a href="articles/delta-force-hawk-ops-complete-guide.html">Delta Force: Hawk Ops — The Complete Guide</a></h3>
+          <p class="card-excerpt">Your all-in-one guide to Delta Force: Hawk Ops. Covers game modes, operators, weapons, maps, economy systems, and everything you need to dominate the battlefield from day one.</p>
+          <div class="card-meta">
+            <time datetime="2026-07-24">Jul 24, 2026</time>
+            <span class="read-time">📖 15 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: Havoc Extraction -->
+      <article class="article-card" data-category="cat-mode">
+        <img class="card-image-real" src="images/cover-havoc.jpg" alt="Havoc Operations Extraction Guide" loading="lazy">
+        <div class="card-body">
+          <span class="card-category cat-mode">Game Mode</span>
+          <h3 class="card-title"><a href="articles/havoc-operations-extraction-guide.html">Havoc Operations — Extraction Guide</a></h3>
+          <p class="card-excerpt">Master the extraction mode with our comprehensive guide. Learn loot routes, extraction points, PvE strategies, and how to maximize your Havoc Coin earnings while avoiding common pitfalls.</p>
+          <div class="card-meta">
+            <time datetime="2026-07-24">Jul 24, 2026</time>
+            <span class="read-time">📖 12 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3: All-Out Warfare -->
+      <article class="article-card" data-category="cat-mode">
+        <img class="card-image-real" src="images/cover-allout.jpg" alt="All-Out Warfare 32v32 Guide" loading="lazy">
+        <div class="card-body">
+          <span class="card-category cat-mode">Game Mode</span>
+          <h3 class="card-title"><a href="articles/all-out-warfare-guide.html">All-Out Warfare — 32v32 Battlefield Guide</a></h3>
+          <p class="card-excerpt">Dominate the 32v32 battlefield with vehicle tactics, objective strategies, and team coordination tips. Learn the best spawn points, flanking routes, and how to use armor and helicopters effectively.</p>
+          <div class="card-meta">
+            <time datetime="2026-07-24">Jul 24, 2026</time>
+            <span class="read-time">📖 10 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4: Red Wolf -->
+      <article class="article-card" data-category="cat-operator">
+        <img class="card-image-real" src="images/cover-redwolf.jpg" alt="Red Wolf Operator Guide" loading="lazy">
+        <div class="card-body">
+          <span class="card-category cat-operator">Operator</span>
+          <h3 class="card-title"><a href="articles/red-wolf-operator-guide.html">Red Wolf — Slide King Operator Guide</a></h3>
+          <p class="card-excerpt">Learn the slide king's tactics and breach strategies. Master Red Wolf's smoke screen abilities, sliding mechanics, and close-quarters combat techniques to outplay enemies in tight spaces.</p>
+          <div class="card-meta">
+            <time datetime="2026-07-24">Jul 24, 2026</time>
+            <span class="read-time">📖 8 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 5: Weilong -->
+      <article class="article-card" data-category="cat-operator">
+        <img class="card-image-real" src="images/cover-weilong.jpg" alt="Weilong Operator Guide" loading="lazy">
+        <div class="card-body">
+          <span class="card-category cat-operator">Operator</span>
+          <h3 class="card-title"><a href="articles/weilong-operator-guide.html">Weilong — Aerial Assault Operator Guide</a></h3>
+          <p class="card-excerpt">Master aerial dominance with Weilong's jetpack abilities. Learn optimal jump routes, recon tactics from above, and how to surprise enemies with vertical flanking in both Havoc and All-Out modes.</p>
+          <div class="card-meta">
+            <time datetime="2026-07-24">Jul 24, 2026</time>
+            <span class="read-time">📖 9 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 6: Silver Wing -->
+      <article class="article-card" data-category="cat-operator">
+        <img class="card-image-real" src="images/cover-silverwing.jpg" alt="Silver Wing Operator Guide" loading="lazy">
+        <div class="card-body">
+          <span class="card-category cat-operator">Operator</span>
+          <h3 class="card-title"><a href="articles/silver-wing-operator-guide.html">Silver Wing — Recon Drone Operator Guide</a></h3>
+          <p class="card-excerpt">Control the battlefield with recon drones and tactical awareness. Silver Wing's surveillance capabilities give your team unparalleled intel for planning pushes and avoiding ambushes.</p>
+          <div class="card-meta">
+            <time datetime="2026-07-24">Jul 24, 2026</time>
+            <span class="read-time">📖 8 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 7: Hive Medic -->
+      <article class="article-card" data-category="cat-operator">
+        <img class="card-image-real" src="images/cover-hivemedic.jpg" alt="Hive Medic Operator Guide" loading="lazy">
+        <div class="card-body">
+          <span class="card-category cat-operator">Operator</span>
+          <h3 class="card-title"><a href="articles/hive-medic-operator-guide.html">Hive Medic — Ultimate Support Operator Guide</a></h3>
+          <p class="card-excerpt">Become the ultimate support with healing smoke abilities. Learn how to keep your squad alive during intense firefights, optimal smoke placement, and synergies with aggressive operators.</p>
+          <div class="card-meta">
+            <time datetime="2026-07-24">Jul 24, 2026</time>
+            <span class="read-time">📖 7 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 8: Weapon Tier List -->
+      <article class="article-card" data-category="cat-weapon">
+        <img class="card-image-real" src="images/cover-weapons.jpg" alt="Weapon Tier List" loading="lazy">
+        <div class="card-body">
+          <span class="card-category cat-weapon">Weapons</span>
+          <h3 class="card-title"><a href="articles/weapon-tier-list-meta.html">Weapon Tier List — Current Meta Rankings</a></h3>
+          <p class="card-excerpt">Current meta weapon rankings for both Havoc and All-Out Warfare modes. See which guns dominate at each range, recoil patterns, damage drop-off, and the best attachments for every weapon.</p>
+          <div class="card-meta">
+            <time datetime="2026-07-24">Jul 24, 2026</time>
+            <span class="read-time">📖 11 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 9: Budget Weapon Builds -->
+      <article class="article-card" data-category="cat-weapon">
+        <img class="card-image-real" src="images/cover-budget.jpg" alt="Budget Weapon Builds" loading="lazy">
+        <div class="card-body">
+          <span class="card-category cat-weapon">Weapons</span>
+          <h3 class="card-title"><a href="articles/budget-weapon-builds.html">Budget Weapon Builds — Modification Codes</a></h3>
+          <p class="card-excerpt">Best budget weapon builds with modification codes you can copy directly. Maximize damage, control recoil, and stay competitive without spending all your Havoc Coins on attachments.</p>
+          <div class="card-meta">
+            <time datetime="2026-07-24">Jul 24, 2026</time>
+            <span class="read-time">📖 9 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 10: Dam Zero Map -->
+      <article class="article-card" data-category="cat-map">
+        <img class="card-image-real" src="images/cover-damzero.jpg" alt="Dam Zero Map Guide" loading="lazy">
+        <div class="card-body">
+          <span class="card-category cat-map">Map</span>
+          <h3 class="card-title"><a href="articles/dam-zero-map-guide.html">Dam Zero — Complete Map Guide</a></h3>
+          <p class="card-excerpt">Complete loot locations and knife run routes for Dam Zero. Find the highest-value spawn points, learn extraction routes, and discover the fastest money-making strategies on this map.</p>
+          <div class="card-meta">
+            <time datetime="2026-07-24">Jul 24, 2026</time>
+            <span class="read-time">📖 10 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 11: Longbow Valley -->
+      <article class="article-card" data-category="cat-map">
+        <img class="card-image-real" src="images/cover-longbow.jpg" alt="Longbow Valley Map Guide" loading="lazy">
+        <div class="card-body">
+          <span class="card-category cat-map">Map</span>
+          <h3 class="card-title"><a href="articles/longbow-valley-map-guide.html">Longbow Valley — Complete Map Guide</a></h3>
+          <p class="card-excerpt">Diamond Queen Hotel, Radar Station, and the best loot routes across Longbow Valley. Master the elevation changes, sniper positions, and vehicle spawn points for maximum survival rate.</p>
+          <div class="card-meta">
+            <time datetime="2026-07-24">Jul 24, 2026</time>
+            <span class="read-time">📖 11 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 12: Bakhsh Aerospace -->
+      <article class="article-card" data-category="cat-map">
+        <img class="card-image-real" src="images/cover-bakhsh.jpg" alt="Bakhsh Aerospace Base Guide" loading="lazy">
+        <div class="card-body">
+          <span class="card-category cat-map">Map</span>
+          <h3 class="card-title"><a href="articles/bakhsh-aerospace-base-guide.html">Bakhsh Aerospace Base — Complete Guide</a></h3>
+          <p class="card-excerpt">Babel Tower, Museum, and gold spawn locations inside the Aerospace Base. Learn the interior layouts, choke points, and the best loadouts for this high-loot, high-risk industrial map.</p>
+          <div class="card-meta">
+            <time datetime="2026-07-24">Jul 24, 2026</time>
+            <span class="read-time">📖 10 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 13: Economy Guide -->
+      <article class="article-card" data-category="cat-economy">
+        <img class="card-image-real" src="images/cover-economy.jpg" alt="Economy System Money Guide" loading="lazy">
+        <div class="card-body">
+          <span class="card-category cat-economy">Economy</span>
+          <h3 class="card-title"><a href="articles/economy-system-money-guide.html">Economy System — Money Making Guide</a></h3>
+          <p class="card-excerpt">Learn to earn Havoc Coins fast with knife runs, loot flipping, and smart extraction strategies. The complete breakdown of the in-game economy and how to become a millionaire.</p>
+          <div class="card-meta">
+            <time datetime="2026-07-24">Jul 24, 2026</time>
+            <span class="read-time">📖 9 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 14: Beginner Tips -->
+      <article class="article-card" data-category="cat-beginner">
+        <img class="card-image-real" src="images/cover-beginner.jpg" alt="Beginner Tips and Common Mistakes" loading="lazy">
+        <div class="card-body">
+          <span class="card-category cat-beginner">Beginner</span>
+          <h3 class="card-title"><a href="articles/beginner-tips-mistakes.html">15 Beginner Tips & Common Mistakes</a></h3>
+          <p class="card-excerpt">15 essential tips and common mistakes every new player should know. From basic movement mechanics to advanced positioning, avoid the pitfalls that keep beginners stuck in low ranks.</p>
+          <div class="card-meta">
+            <time datetime="2026-07-24">Jul 24, 2026</time>
+            <span class="read-time">📖 8 min read</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="site-logo">
+            <span class="logo-icon">DF</span>
+            <span>Hawk Ops Guide</span>
+          </a>
+          <p>The most comprehensive English-language Delta Force: Hawk Ops guide. Community-driven strategies for operators, weapons, maps, and game modes. Updated for Season 7/8 2026.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Guide Links</h4>
+          <ul class="footer-links">
+            <li><a href="articles/delta-force-hawk-ops-complete-guide.html">Complete Guide</a></li>
+            <li><a href="articles/havoc-operations-extraction-guide.html">Havoc Extraction</a></li>
+            <li><a href="articles/all-out-warfare-guide.html">All-Out Warfare</a></li>
+            <li><a href="articles/red-wolf-operator-guide.html">Red Wolf Guide</a></li>
+            <li><a href="articles/weilong-operator-guide.html">Weilong Guide</a></li>
+            <li><a href="articles/weapon-tier-list-meta.html">Weapon Tier List</a></li>
+            <li><a href="articles/budget-weapon-builds.html">Budget Builds</a></li>
+            <li><a href="articles/economy-system-money-guide.html">Economy Guide</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#" data-filter="cat-mode">Game Modes</a></li>
+            <li><a href="#" data-filter="cat-operator">Operators</a></li>
+            <li><a href="#" data-filter="cat-weapon">Weapons</a></li>
+            <li><a href="#" data-filter="cat-map">Maps</a></li>
+            <li><a href="#" data-filter="cat-economy">Economy</a></li>
+            <li><a href="#" data-filter="cat-beginner">Beginner</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="ads.txt">ads.txt</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Delta Force Hawk Ops Guide. Fan site — not affiliated with Team Jade or Garena.</span>
+        <span>Built for the community.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" aria-label="Scroll to top">↑</button>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/three-hero.js"></script>
+
+</body>
+</html>

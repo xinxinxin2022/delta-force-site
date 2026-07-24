@@ -1,0 +1,14 @@
+# Robots.txt for Delta Force Hawk Ops Guide
+# https://example.github.io/delta-force-hawk-ops-guide/
+
+User-agent: *
+Allow: /
+
+# Disallow sensitive/system directories
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /.well-known/
+
+# Sitemap
+Sitemap: https://example.github.io/delta-force-hawk-ops-guide/sitemap.xml
