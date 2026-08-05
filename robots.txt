@@ -1,5 +1,5 @@
 # Robots.txt for Delta Force Hawk Ops Guide
-# https://example.github.io/delta-force-hawk-ops-guide/
+# https://game-delta.asia/
 
 User-agent: *
 Allow: /
@@ -11,4 +11,4 @@ Disallow: /private/
 Disallow: /.well-known/
 
 # Sitemap
-Sitemap: https://example.github.io/delta-force-hawk-ops-guide/sitemap.xml
+Sitemap: https://game-delta.asia/sitemap.xml
