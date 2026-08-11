@@ -148,6 +148,22 @@
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1812733940760212"
      crossorigin="anonymous"></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Us — Delta Force Hawk Ops Guide",
+    "url": "https://game-delta.asia/contact.html",
+    "description": "Get in touch with the Delta Force Hawk Ops Guide team. Send feedback, suggestions, or questions.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Delta Force Hawk Ops Guide",
+      "url": "https://game-delta.asia/"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -158,15 +174,16 @@
         <span class="logo-icon">DF</span>
         <span>Hawk Ops Guide</span>
       </a>
-      <nav>
+            <nav>
         <ul class="nav-menu">
-          <li><a href="index.html" data-en="Home" data-zh="首页">Home</a></li>
-          <li><a href="index.html#game-modes">Game Modes</a></li>
-          <li><a href="index.html#operators">Operators</a></li>
-          <li><a href="index.html#weapons">Weapons</a></li>
-          <li><a href="index.html#maps">Maps</a></li>
-          <li><button class="lang-toggle" id="langToggle">EN / 中</button></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="modes.html">Game Modes</a></li>
+          <li><a href="operators.html">Operators</a></li>
+          <li><a href="weapons.html">Weapons</a></li>
+          <li><a href="maps.html">Maps</a></li>
+          <li><a href="faq.html">FAQ</a></li>
           <li><a href="about.html">About</a></li>
+          <li><button class="lang-toggle" id="langToggle" title="切换中文/English">EN / 中</button></li>
         </ul>
       </nav>
       <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
@@ -190,7 +207,7 @@
     <div class="article-content">
 
       <!-- Contact Form -->
-      <form class="contact-form" action="#" method="POST">
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST">
         <div class="form-group">
           <label for="contact-name">Your Name</label>
           <input type="text" id="contact-name" name="name" placeholder="Enter your name" required>
@@ -215,7 +232,10 @@
           <label for="contact-message">Message</label>
           <textarea id="contact-message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
         </div>
+        <input type="hidden" name="_subject" value="New message from Delta Force Hawk Ops Guide">
+        <input type="hidden" name="_next" value="https://game-delta.asia/contact.html?sent=1">
         <button type="submit" class="btn btn-primary">Send Message</button>
+        <p id="formStatus" style="display:none; margin-top:var(--space-md); padding:var(--space-md); border-radius:var(--border-radius-sm);"></p>
       </form>
 
       <!-- Contact Info -->
@@ -279,7 +299,7 @@
     </div>
   </main>
 
-  <!-- ========== FOOTER ========== -->
+    <!-- ========== FOOTER ========== -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -306,22 +326,29 @@
         <div>
           <h4 class="footer-heading">Categories</h4>
           <ul class="footer-links">
-            <li><a href="index.html#game-modes">Game Modes</a></li>
-            <li><a href="index.html#operators">Operators</a></li>
-            <li><a href="index.html#weapons">Weapons</a></li>
-            <li><a href="index.html#maps">Maps</a></li>
-            <li><a href="index.html#economy">Economy</a></li>
-            <li><a href="index.html#beginner">Beginner</a></li>
+            <li><a href="modes.html">Game Modes</a></li>
+            <li><a href="operators.html">Operators</a></li>
+            <li><a href="weapons.html">Weapons</a></li>
+            <li><a href="maps.html">Maps</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="about.html">About</a></li>
           </ul>
         </div>
         <div>
           <h4 class="footer-heading">Legal</h4>
           <ul class="footer-links">
-            <li><button class="lang-toggle" id="langToggle">EN / 中</button></li>
-          <li><a href="about.html">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="ads.txt">ads.txt</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">More Game Guides</h4>
+          <ul class="footer-links">
+            <li><a href="https://game-elden.asia" target="_blank" rel="noopener">Elden Ring Guide</a></li>
+            <li><a href="https://tailuopai.online" target="_blank" rel="noopener">Palworld Guides</a></li>
           </ul>
         </div>
       </div>
@@ -354,5 +381,59 @@
 };
   </script>
   <script src="js/main.js"></script>
+  <script>
+    // Contact form AJAX submission
+    (function() {
+      var form = document.getElementById('contactForm');
+      var status = document.getElementById('formStatus');
+      if (!form) return;
+
+      // Check if form was just submitted
+      if (window.location.search.indexOf('sent=1') > -1) {
+        status.style.display = 'block';
+        status.style.background = 'rgba(16, 185, 129, 0.15)';
+        status.style.color = '#10b981';
+        status.style.border = '1px solid rgba(16, 185, 129, 0.3)';
+        status.textContent = 'Thank you! Your message has been sent successfully. We will get back to you within 48 hours.';
+        form.reset();
+      }
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var btn = form.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function(response) {
+          if (response.ok) {
+            status.style.display = 'block';
+            status.style.background = 'rgba(16, 185, 129, 0.15)';
+            status.style.color = '#10b981';
+            status.style.border = '1px solid rgba(16, 185, 129, 0.3)';
+            status.textContent = 'Thank you! Your message has been sent successfully. We will get back to you within 48 hours.';
+            form.reset();
+          } else {
+            throw new Error('Form submission failed');
+          }
+          btn.disabled = false;
+          btn.textContent = 'Send Message';
+        }).catch(function(error) {
+          status.style.display = 'block';
+          status.style.background = 'rgba(239, 68, 68, 0.15)';
+          status.style.color = '#ef4444';
+          status.style.border = '1px solid rgba(239, 68, 68, 0.3)';
+          status.textContent = 'Sorry, there was an error sending your message. Please try again or email us directly at ben357753@163.com';
+          btn.disabled = false;
+          btn.textContent = 'Send Message';
+        });
+      });
+    })();
+  </script>
+  <!-- Cookie Consent Banner -->
+  <script src="js/cookie-consent.js"></script>
 </body>
 </html>
