@@ -774,9 +774,19 @@ img {
   border: 1px solid var(--border-color);
 }
 
-/* --- Ad Slots (hidden until AdSense approved) --- */
+/* --- Ad Slots --- */
 .ad-slot {
-  display: none;
+  width: 100%;
+  min-height: 100px;
+  margin: var(--space-xl) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(26, 34, 53, 0.5);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--border-radius-sm);
+  padding: var(--space-md);
 }
 
 .ad-slot-label {
