@@ -1,0 +1,85 @@
+---
+import '../styles/global.css';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  jsonLd?: object[];
+  currentPage?: string;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description = 'Complete Delta Force: Hawk Ops guide for 2026.',
+  canonical,
+  jsonLd = [],
+  currentPage = 'home',
+  noindex = false,
+} = Astro.props;
+
+const canonicalUrl = canonical || Astro.url.href;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <meta name="author" content="Delta Force Hawk Ops Guide">
+  {noindex ? <meta name="robots" content="noindex" /> : <meta name="robots" content="index, follow" />}
+  <link rel="canonical" href={canonicalUrl}>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={canonicalUrl}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:site_name" content="Delta Force Hawk Ops Guide">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content={canonicalUrl}>
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23f59e0b' width='100' height='100' rx='20'/><text x='50' y='70' font-size='60' text-anchor='middle' fill='%230a0e17' font-weight='900'>DF</text></svg>">
+
+  <!-- JSON-LD -->
+  {jsonLd.map((ld) => (
+    <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+  ))}
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QDM4XTJZRC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QDM4XTJZRC');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1812733940760212" crossorigin="anonymous"></script>
+</head>
+<body>
+  <SiteHeader currentPage={currentPage} />
+  <slot />
+  <SiteFooter />
+  <button class="scroll-top" aria-label="Scroll to top">↑</button>
+  <script src="../scripts/main.ts"></script>
+  <script src="../scripts/three-hero.ts"></script>
+  <script src="../scripts/cookie-consent.ts"></script>
+</body>
+</html>

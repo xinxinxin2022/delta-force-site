@@ -1,0 +1,28 @@
+---
+interface Props {
+  currentPage?: string;
+}
+const { currentPage = 'home' } = Astro.props;
+---
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <span class="logo-icon">DF</span>
+      <span>Hawk Ops Guide</span>
+    </a>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="/" class:list={{ active: currentPage === 'home' }}>Home</a></li>
+        <li><a href="/modes.html" class:list={{ active: currentPage === 'modes' }}>Game Modes</a></li>
+        <li><a href="/operators.html" class:list={{ active: currentPage === 'operators' }}>Operators</a></li>
+        <li><a href="/weapons.html" class:list={{ active: currentPage === 'weapons' }}>Weapons</a></li>
+        <li><a href="/maps.html" class:list={{ active: currentPage === 'maps' }}>Maps</a></li>
+        <li><a href="/faq.html" class:list={{ active: currentPage === 'faq' }}>FAQ</a></li>
+        <li><a href="/about.html" class:list={{ active: currentPage === 'about' }}>About</a></li>
+        <li><button class="lang-toggle" id="langToggle" title="切换中文/English">EN / 中</button></li>
+      </ul>
+    </nav>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+  </div>
+</header>

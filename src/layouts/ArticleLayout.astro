@@ -1,0 +1,103 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  entry: CollectionEntry<'articles'>;
+}
+
+const { entry } = Astro.props;
+const { data, id } = entry;
+const slug = id.replace('.mdx', '');
+
+const articleUrl = `https://game-delta.asia/articles/${slug}.html`;
+const heroImageUrl = `https://cdn.jsdelivr.net/gh/guoyx/delta-force-site@images-v1/images/${data.heroImage}`;
+
+const categoryNames: Record<string, string> = {
+  overview: 'Overview',
+  mode: 'Game Modes',
+  operator: 'Operators',
+  weapon: 'Weapons',
+  map: 'Maps',
+  economy: 'Economy',
+  beginner: 'Beginner',
+  season: 'Season Updates',
+};
+
+const categoryUrls: Record<string, string> = {
+  overview: 'https://game-delta.asia/',
+  mode: 'https://game-delta.asia/modes.html',
+  operator: 'https://game-delta.asia/operators.html',
+  weapon: 'https://game-delta.asia/weapons.html',
+  map: 'https://game-delta.asia/maps.html',
+  economy: 'https://game-delta.asia/',
+  beginner: 'https://game-delta.asia/',
+  season: 'https://game-delta.asia/',
+};
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: data.title,
+    description: data.description,
+    image: heroImageUrl,
+    author: { '@type': 'Organization', name: data.author },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Delta Force Hawk Ops Guide',
+      logo: { '@type': 'ImageObject', url: 'https://game-delta.asia/favicon.svg' },
+    },
+    datePublished: data.pubDate.toISOString().split('T')[0],
+    dateModified: (data.updatedDate || data.pubDate).toISOString().split('T')[0],
+    mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://game-delta.asia/' },
+      { '@type': 'ListItem', position: 2, name: categoryNames[data.category] || 'Guides', item: categoryUrls[data.category] },
+      { '@type': 'ListItem', position: 3, name: data.title, item: articleUrl },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title={`${data.title} | Delta Force Guide`}
+  description={data.description}
+  canonical={articleUrl}
+  jsonLd={jsonLd}
+  currentPage={data.category}
+>
+  <main class="article-page">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href={categoryUrls[data.category] || '/'}>{categoryNames[data.category] || 'Guides'}</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>{data.title}</span>
+      </nav>
+
+      <div class="article-hero-banner">
+        <img src={heroImageUrl} alt={data.title} loading="lazy">
+      </div>
+
+      <header>
+        <h1 class="article-title">{data.title}</h1>
+        <div class="article-meta">
+          <span class="article-meta-item">✍️ {data.author}</span>
+          <span class="article-meta-item">📅 Updated {data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          <span class="article-meta-item">⏱️ {data.readTime} min read</span>
+          <span class="article-meta-item">📁 {categoryNames[data.category] || data.category}</span>
+        </div>
+      </header>
+
+      <article class="article-content">
+        <slot />
+      </article>
+    </div>
+  </main>
+</BaseLayout>

@@ -1,12 +1,13 @@
 import { z, defineCollection } from 'astro:content';
+import { glob } from 'astro/loaders';
 
 const articles = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.mdx', base: './src/content/articles' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    pubDate: z.date(),
-    updatedDate: z.date().optional(),
+    pubDate: z.coerce.date(),
+    updatedDate: z.coerce.date().optional(),
     category: z.enum([
       'overview', 'mode', 'operator',
       'weapon', 'map', 'economy',
