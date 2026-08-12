@@ -539,15 +539,16 @@ img {
   min-height: calc(100vh - var(--header-height));
 }
 
+.article-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
 .article-header {
   padding: var(--space-xl) 0 var(--space-lg);
   margin-bottom: var(--space-2xl);
   text-align: center;
-}
-
-.article-header .container {
-  max-width: 860px;
-  margin: 0 auto;
 }
 
 .breadcrumb {
@@ -597,10 +598,8 @@ img {
 
 /* Article Content */
 .article-content {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 0 var(--space-lg) var(--space-3xl);
   text-align: left;
+  padding-bottom: var(--space-3xl);
 }
 
 .article-content h2 {
