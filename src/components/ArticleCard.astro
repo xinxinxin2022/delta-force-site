@@ -31,7 +31,7 @@ const categoryClasses: Record<string, string> = {
 };
 
 const heroUrl = `https://cdn.jsdelivr.net/gh/guoyx/delta-force-site@images-v1/images/${data.heroImage}`;
-const articleUrl = `/articles/${slug}.html`;
+const articleUrl = `/articles/${slug}/`;
 ---
 <article class="article-card" data-category={categoryClasses[data.category] || `cat-${data.category}`}>
   <img class="card-image-real" src={heroUrl} alt={data.title} loading="lazy">

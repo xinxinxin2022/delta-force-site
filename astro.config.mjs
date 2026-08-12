@@ -9,9 +9,9 @@ export const SITE_URL = 'https://game-delta.asia';
 export default {
   site: SITE_URL,
   build: {
-    format: 'file',  // produces .html files, preserving existing URL structure
+    format: 'directory',  // clean URLs without .html extension
   },
-  trailingSlash: 'never',
+  trailingSlash: 'always',
   integrations: [
     mdx(),
     sitemap(),

@@ -10,7 +10,7 @@ const { entry } = Astro.props;
 const { data, id } = entry;
 const slug = id.replace('.mdx', '');
 
-const articleUrl = `https://game-delta.asia/articles/${slug}.html`;
+const articleUrl = `https://game-delta.asia/articles/${slug}/`;
 const heroImageUrl = `https://cdn.jsdelivr.net/gh/guoyx/delta-force-site@images-v1/images/${data.heroImage}`;
 
 const categoryNames: Record<string, string> = {
