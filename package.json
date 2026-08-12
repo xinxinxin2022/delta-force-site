@@ -1,0 +1,21 @@
+{
+  "name": "delta-force-site",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xinxinxin2022/delta-force-site.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "astro": "latest",
+    "@astrojs/mdx": "latest",
+    "@astrojs/sitemap": "latest",
+    "sharp": "latest"
+  }
+}
