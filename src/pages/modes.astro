@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AdSlot from '../components/AdSlot.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import ComparisonTable from '../components/ComparisonTable.astro';
+import { getCollection } from 'astro:content';
+
+const articles = await getCollection('articles');
+const modeArticles = articles.filter(a => a.data.category === 'mode');
+---
+
+<BaseLayout
+  title="Delta Force Game Modes Guide — Havoc Operations & All-Out Warfare"
+  description="Complete guides for all Delta Force: Hawk Ops game modes. Master Havoc Operations extraction and dominate All-Out Warfare 32v32 battles."
+  canonical="https://game-delta.asia/modes.html"
+  currentPage="modes"
+>
+  <section class="hero hero-category">
+    <img src="/images/cover-havoc.jpg" alt="Havoc Operations battlefield" class="hero-bg-img" aria-hidden="true">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">Game Modes</span>
+      </nav>
+      <span class="hero-badge">Game Modes Hub</span>
+      <h1 class="hero-title">Game Modes Guide — Havoc Operations & All-Out Warfare</h1>
+      <p class="hero-subtitle">Two distinct battlefields, two different mindsets. Master extraction pressure-cookers and massive 32v32 sieges with our complete mode-by-mode breakdown.</p>
+      <div class="hero-cta">
+        <a href="#articles" class="btn btn-primary">Browse Guides</a>
+        <a href="#mode-comparison" class="btn btn-secondary">Mode Comparison</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="category-intro">
+        <h2 class="section-title">Delta Force Game Modes Overview</h2>
+        <p class="section-lead">Delta Force: Hawk Ops offers two core experiences that couldn't be more different. <strong>Havoc Operations</strong> is the tense, loot-driven extraction mode where every decision could be your last. <strong>All-Out Warfare</strong> is a massive 32v32 battlefield with vehicles, armor, and objective-based chaos. Choose your battlefield — or master both.</p>
+        <p>Whether you're sneaking through Dam Zero with a backpack full of gold or calling in armor support on a 64-player frontline, understanding the rules, pacing, and economy of each mode is the difference between winning and going home empty-handed.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="mode-comparison">
+    <div class="container">
+      <h2 class="section-title">Havoc Operations vs All-Out Warfare</h2>
+      <p class="section-lead">Not sure which mode to jump into? Here's a side-by-side breakdown of what each offers.</p>
+      <ComparisonTable
+        headers={["Feature", "Havoc Operations", "All-Out Warfare"]}
+        rows={[
+          ["<strong>Game Type</strong>", "Extraction / Survival", "Large-scale PvP (32v32)"],
+          ["<strong>Team Size</strong>", "Solo / Duo / Trio", "32 players per team"],
+          ["<strong>Match Length</strong>", "20–40 minutes", "15–25 minutes"],
+          ["<strong>Core Objective</strong>", "Loot, survive, extract", "Capture points, destroy targets"],
+          ["<strong>Lose Gear on Death?</strong>", "Yes (if not extracted)", "No"],
+          ["<strong>Economy</strong>", "Havoc Coins — persistent", "Loadout-based, no loss"],
+          ["<strong>Vehicles</strong>", "Limited (ATVs, boats)", "Tanks, helicopters, armor"],
+          ["<strong>Maps</strong>", "Dam Zero, Longbow Valley, Bakhsh, Aerospace Base", "Dedicated large-scale battlefields"],
+          ["<strong>Pacing</strong>", "Slow, tense, methodical", "Fast, chaotic, team-driven"],
+          ["<strong>Best For</strong>", "Solo players, loot hunters, risk-takers", "Team players, objective-focused, vehicle fans"],
+        ]}
+      />
+    </div>
+  </section>
+
+  <section class="section" id="articles">
+    <div class="container">
+      <h2 class="section-title">Game Modes Guides</h2>
+      <p class="section-lead">Deep-dive into each mode with dedicated strategy guides.</p>
+      <AdSlot position="in-article" />
+      <div class="articles-grid articles-grid-2col">
+        {modeArticles.map(entry => <ArticleCard entry={entry} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Quick Tips for Both Modes</h2>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <span class="tip-icon"></span>
+          <h3>Start with All-Out Warfare</h3>
+          <p>New to Delta Force? Learn gunplay and map awareness in All-Out Warfare where dying has no penalty. Then graduate to Havoc when you're comfortable.</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-icon"></span>
+          <h3>Run Knife Runs in Havoc</h3>
+          <p>Broke? Bring only a knife, sprint to high-value loot spots, grab what you can, and extract. Repeat until you can afford a proper loadout.</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-icon"></span>
+          <h3>Vehicles Win Games</h3>
+          <p>In All-Out Warfare, armor and helicopters decide the match. Learn to call them in, use them for flanking, and counter enemy vehicles with AA support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

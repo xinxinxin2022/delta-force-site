@@ -1,0 +1,206 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AdSlot from '../components/AdSlot.astro';
+
+const faqItems = [
+  { q: "What is Delta Force: Hawk Ops?", a: "Delta Force: Hawk Ops is a free-to-play tactical first-person shooter developed by Team Jade and published by Garena. It features multiple game modes including Havoc Operations (extraction/PvE), All-Out Warfare (32v32 large-scale battles), and supports both solo and squad gameplay across diverse maps and environments." },
+  { q: "Is Delta Force: Hawk Ops free to play?", a: "Yes, Delta Force: Hawk Ops is completely free to play. The game follows a free-to-play model with optional cosmetic purchases and battle passes. All gameplay-affecting content, including operators, weapons, and maps, can be earned through gameplay." },
+  { q: "What platforms is Delta Force: Hawk Ops available on?", a: "Delta Force: Hawk Ops is available on PC (Windows) and mobile platforms (iOS and Android). The game features cross-platform play in some modes. Performance and controls vary between platforms, with PC offering the most precise controls and mobile providing on-the-go gaming." },
+  { q: "What are the best weapons in the current meta?", a: "The weapon meta changes with updates and patches. Generally, assault rifles like the M4A1 and AK variants are solid all-around choices, SMGs excel in close quarters, and LMGs provide strong sustained fire. Check our Weapon Tier List for the most up-to-date rankings based on current game balance." },
+  { q: "How do weapon modification codes work?", a: "Weapon modification codes are shareable loadout strings that let you copy other players' weapon builds exactly. You can enter a code in the weapon customization screen to automatically apply all attachments and modifications. This saves time and ensures you get the optimal setup without trial and error." },
+  { q: "Which map is best for farming money?", a: "Dam Zero is generally considered the best map for beginners to farm money due to its straightforward layout and good loot density. Bakhsh Aerospace Base has higher-value loot but also more dangerous encounters. Longbow Valley offers good mid-tier value with varied terrain. See our individual map guides for specific loot routes." },
+  { q: "How do I extract successfully in Havoc Operations?", a: "To extract successfully: know your extraction point locations before you go in, plan your route early (don't wait until the last minute), avoid unnecessary fights once you have valuable loot, use smoke for cover when moving to extraction, and be aware that extraction points often attract other players camping the area." },
+  { q: "Can I play solo or do I need a team?", a: "Delta Force: Hawk Ops supports both solo and squad play. In Havoc Operations, you can queue solo but will face squads. In All-Out Warfare, you're always in a large team. While you can play solo, communication and teamwork with a squad significantly improves your success rate, especially in extraction mode." },
+  { q: "How do I level up quickly?", a: "Level up quickly by completing daily missions and challenges, focusing on objective-based play rather than just kills, playing regularly to accumulate experience, and participating in special events that offer bonus XP. Havoc Operations tends to yield more XP per match if you survive and extract successfully." },
+  { q: "What should I do if I keep dying early in Havoc?", a: "If you're dying early in Havoc Operations: start by playing conservatively, avoid hot-drop zones, use side routes to reach loot areas, listen for audio cues (gunfire, footsteps), always have an escape plan, and don't engage every enemy you see. Focus on learning the map before trying to clear it." },
+  { q: "How do vehicles work in All-Out Warfare?", a: "Vehicles in All-Out Warfare include armored vehicles, transport trucks, helicopters, and boats. You need to find and enter them at spawn points. Vehicles have health bars and can be destroyed by concentrated fire or anti-vehicle weapons. Helicopters provide aerial reconnaissance and fire support but are vulnerable to anti-air weapons." },
+  { q: "What is the economy system in Havoc?", a: "The economy system revolves around Havoc Coins, the in-game currency. You earn coins by extracting loot, completing missions, and selling items on the market. You spend coins on weapons, attachments, armor, and supplies before each raid. Managing your economy is crucial — going into debt limits your options, while smart investing can give you better gear." },
+  { q: "How often does the game update?", a: "Delta Force: Hawk Ops receives regular updates, typically including seasonal content with new operators, weapons, maps, and game modes. Major balance patches happen between seasons. We update our guides after each significant patch to reflect changes in the meta, operator abilities, and weapon performance." },
+  { q: "How can I contact the website team?", a: "You can reach us through our Contact page using the contact form, or by sending an email to ben357753@163.com. We typically respond within 48 hours. For urgent matters like major guide errors, mention it in the subject line and we'll prioritize your message." },
+  { q: "Is this website affiliated with the game developers?", a: "No. Delta Force Hawk Ops Guide is an independent fan-made website. We are not affiliated with, endorsed by, or connected to Team Jade, Garena, or any official Delta Force entities. All information is based on community knowledge and publicly available data." },
+  { q: "Can I contribute to this guide?", a: "Absolutely! We welcome community contributions. If you have expertise in a specific operator, map, weapon, or strategy and want to help improve our guides, reach out through our contact form with the subject 'Want to Contribute.'" },
+];
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map(item => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+};
+---
+
+<BaseLayout
+  title="FAQ — Delta Force: Hawk Ops Frequently Asked Questions"
+  description="Everything you need to know about Delta Force: Hawk Ops. Game modes, weapons, operators, maps, economy, and beginner questions answered."
+  canonical="https://game-delta.asia/faq.html"
+  currentPage="faq"
+  jsonLd={[faqJsonLd]}
+>
+  <main class="article-page">
+    <div class="article-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>FAQ</span>
+        </nav>
+        <h1 class="article-title">Frequently Asked Questions</h1>
+        <p style="color: var(--text-secondary); font-size: 1.1rem; margin-top: var(--space-md);">Everything you need to know about Delta Force: Hawk Ops. Click any question to reveal the answer.</p>
+      </div>
+    </div>
+
+    <div class="article-content">
+      <AdSlot position="header" />
+
+      <div class="faq-section">
+        <h2>General Questions</h2>
+        {faqItems.slice(0, 3).map((item, i) => (
+          <div class="faq-item">
+            <div class="faq-question">
+              <span><span class="faq-number">{i + 1}</span> {item.q}</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="faq-section">
+        <h2>Weapons & Loadouts</h2>
+        {faqItems.slice(3, 5).map((item, i) => (
+          <div class="faq-item">
+            <div class="faq-question">
+              <span><span class="faq-number">{i + 4}</span> {item.q}</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="faq-section">
+        <h2>Maps & Economy</h2>
+        {faqItems.slice(5, 8).map((item, i) => (
+          <div class="faq-item">
+            <div class="faq-question">
+              <span><span class="faq-number">{i + 6}</span> {item.q}</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="faq-section">
+        <h2>Gameplay & Strategy</h2>
+        {faqItems.slice(8, 12).map((item, i) => (
+          <div class="faq-item">
+            <div class="faq-question">
+              <span><span class="faq-number">{i + 9}</span> {item.q}</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="faq-section">
+        <h2>Website & Community</h2>
+        {faqItems.slice(12).map((item, i) => (
+          <div class="faq-item">
+            <div class="faq-question">
+              <span><span class="faq-number">{i + 13}</span> {item.q}</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <AdSlot position="bottom" />
+    </div>
+  </main>
+
+  <style>
+    .faq-section { margin-bottom: var(--space-xl); }
+    .faq-section h2 {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-sm);
+      border-bottom: 2px solid var(--border-color);
+    }
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      margin-bottom: var(--space-md);
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: var(--space-md) var(--space-lg);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      color: var(--text-primary);
+      transition: background var(--transition-fast);
+    }
+    .faq-question:hover { background: rgba(245, 158, 11, 0.05); }
+    .faq-question .faq-toggle {
+      font-size: 1.2rem;
+      color: var(--accent-primary);
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+      margin-left: var(--space-md);
+    }
+    .faq-item.active .faq-question .faq-toggle { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .faq-item.active .faq-answer { max-height: 500px; }
+    .faq-answer-inner {
+      padding: 0 var(--space-lg) var(--space-lg);
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+    .faq-answer-inner a { color: var(--accent-primary); }
+    .faq-number {
+      display: inline-block;
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--accent-primary);
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: var(--space-sm);
+      font-family: var(--font-heading);
+    }
+  </style>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        q.parentElement.classList.toggle('active');
+      });
+    });
+  </script>
+</BaseLayout>

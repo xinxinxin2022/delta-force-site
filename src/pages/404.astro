@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+---
+<BaseLayout
+  title="Page Not Found — Delta Force Hawk Ops Guide"
+  description="The page you're looking for doesn't exist."
+  currentPage="home"
+  noindex={true}
+>
+  <main class="article-page">
+    <div class="container" style="text-align:center;padding:4rem 0;">
+      <h1 style="font-size:4rem;color:var(--accent-primary);margin-bottom:1rem;">404</h1>
+      <h2 style="margin-bottom:1rem;">Page Not Found</h2>
+      <p style="color:var(--text-secondary);margin-bottom:2rem;">The page you're looking for doesn't exist or has been moved.</p>
+      <a href="/" class="btn btn-primary">Go to Homepage</a>
+    </div>
+  </main>
+</BaseLayout>

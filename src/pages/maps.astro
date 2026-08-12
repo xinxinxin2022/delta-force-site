@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AdSlot from '../components/AdSlot.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+const articles = await getCollection('articles');
+const mapArticles = articles.filter(a => a.data.category === 'map');
+---
+
+<BaseLayout
+  title="Map Guides — All Delta Force Maps with Loot Routes & Strategies"
+  description="Complete map guides for Delta Force: Hawk Ops — Dam Zero, Longbow Valley, Bakhsh Aerospace Base, and more. Loot locations, extraction points, and knife run routes."
+  canonical="https://game-delta.asia/maps.html"
+  currentPage="maps"
+>
+  <section class="hero hero-category">
+    <img src="/images/cover-damzero.jpg" alt="Dam Zero Map" class="hero-bg-img" aria-hidden="true">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">Maps</span>
+      </nav>
+      <span class="hero-badge">Map Hub</span>
+      <h1 class="hero-title">Map Guides — Loot Routes, Extraction Points & Strategies</h1>
+      <p class="hero-subtitle">Every map decoded. Find the highest-value loot spots, safest extraction routes, and fastest knife run paths across all Delta Force battlefields.</p>
+      <div class="hero-cta">
+        <a href="#articles" class="btn btn-primary">Browse Guides</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="category-intro">
+        <h2 class="section-title">Know the Battlefield</h2>
+        <p class="section-lead">In Havoc Operations, <strong>map knowledge is everything</strong>. Knowing where the high-value loot spawns, which extraction points are safest, and how to navigate under pressure is the difference between a profitable run and an empty-handed death. Our map guides cover every POI, loot table, and route you need to master.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="articles">
+    <div class="container">
+      <h2 class="section-title">Map Guides</h2>
+      <p class="section-lead">Complete guides for every map in Delta Force: Hawk Ops.</p>
+      <AdSlot position="in-article" />
+      <div class="articles-grid">
+        {mapArticles.map(entry => <ArticleCard entry={entry} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

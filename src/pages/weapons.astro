@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AdSlot from '../components/AdSlot.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import ComparisonTable from '../components/ComparisonTable.astro';
+import { getCollection } from 'astro:content';
+
+const articles = await getCollection('articles');
+const weaponArticles = articles.filter(a => a.data.category === 'weapon');
+---
+
+<BaseLayout
+  title="Weapon Guides — Tier List, Builds & Modification Codes"
+  description="Delta Force: Hawk Ops weapon guides — current meta tier list, attachment breakdowns, recoil patterns, and budget builds with modification codes you can copy."
+  canonical="https://game-delta.asia/weapons.html"
+  currentPage="weapons"
+>
+  <section class="hero hero-category">
+    <img src="/images/cover-weapons.jpg" alt="Weapon Arsenal" class="hero-bg-img" aria-hidden="true">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">Weapons</span>
+      </nav>
+      <span class="hero-badge">Weapons Arsenal</span>
+      <h1 class="hero-title">Weapon Guides — Tier List, Builds & Modification Codes</h1>
+      <p class="hero-subtitle">Know your loadout, control the battlefield. Current meta rankings, attachment breakdowns, and copy-paste modification codes for every gun.</p>
+      <div class="hero-cta">
+        <a href="#articles" class="btn btn-primary">Browse Guides</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="category-intro">
+        <h2 class="section-title">Master Your Loadout</h2>
+        <p class="section-lead">In Delta Force: Hawk Ops, <strong>your weapon is your lifeline</strong>. Whether you're pushing a Havoc extraction point or holding a 32v32 objective, having the right gun with the right attachments separates winners from body bags.</p>
+        <p>Every weapon in the game has a role — from the surgical precision of the QJB201 DMR to the room-clearing chaos of the CAR-15 SMG. The key is knowing <em>when</em> to reach for each one and <em>how</em> to tune it for maximum effectiveness.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="articles">
+    <div class="container">
+      <h2 class="section-title">Weapon Guides</h2>
+      <p class="section-lead">Deep-dive guides for every weapon category.</p>
+      <AdSlot position="in-article" />
+      <div class="articles-grid">
+        {weaponArticles.map(entry => <ArticleCard entry={entry} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AdSlot from '../components/AdSlot.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import ComparisonTable from '../components/ComparisonTable.astro';
+import { getCollection } from 'astro:content';
+
+const articles = await getCollection('articles');
+const operatorArticles = articles.filter(a => a.data.category === 'operator');
+---
+
+<BaseLayout
+  title="Operator Guides — All Delta Force Characters & Builds"
+  description="Every Delta Force: Hawk Ops operator guide — Red Wolf, Weilong, Silver Wing, Hive Medic, and more. Learn abilities, best loadouts, and playstyle tips."
+  canonical="https://game-delta.asia/operators.html"
+  currentPage="operators"
+>
+  <section class="hero hero-category">
+    <img src="/images/cover-redwolf.jpg" alt="Red Wolf Operator" class="hero-bg-img" aria-hidden="true">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">Operators</span>
+      </nav>
+      <span class="hero-badge">Operator Hub</span>
+      <h1 class="hero-title">Operator Guides — All Delta Force Characters & Builds</h1>
+      <p class="hero-subtitle">Every operator, every ability, every playstyle. Find the perfect character for your squad — or master them all.</p>
+      <div class="hero-cta">
+        <a href="#articles" class="btn btn-primary">Browse Guides</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="category-intro">
+        <h2 class="section-title">Choose Your Operator</h2>
+        <p class="section-lead">In Delta Force: Hawk Ops, <strong>operators define your playstyle</strong>. Each character brings unique abilities that shape how you approach Havoc extractions and All-Out Warfare battles. Whether you're the aggressive breacher, the tactical recon, or the team healer — there's an operator built for you.</p>
+        <p>Our guides cover every ability, the best weapon pairings, ideal team compositions, and situational tips to get the most out of each operator. Master one, or master them all.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="articles">
+    <div class="container">
+      <h2 class="section-title">Operator Guides</h2>
+      <p class="section-lead">Complete guides for every operator in Delta Force: Hawk Ops.</p>
+      <AdSlot position="in-article" />
+      <div class="articles-grid">
+        {operatorArticles.map(entry => <ArticleCard entry={entry} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

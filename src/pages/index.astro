@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import SearchBar from '../components/SearchBar.astro';
+import FilterBar from '../components/FilterBar.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import AdSlot from '../components/AdSlot.astro';
+import { getCollection } from 'astro:content';
+
+const articles = await getCollection('articles');
+const all = articles.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+const categories = [
+  { key: 'all', label: 'All' },
+  { key: 'mode', label: 'Game Modes' },
+  { key: 'operator', label: 'Operators' },
+  { key: 'weapon', label: 'Weapons' },
+  { key: 'map', label: 'Maps' },
+  { key: 'economy', label: 'Economy' },
+  { key: 'beginner', label: 'Beginner' },
+];
+---
+
+<BaseLayout
+  title="Delta Force: Hawk Ops Guide 2026 — Weapons, Operators, Maps & Tips"
+  description="Complete Delta Force: Hawk Ops guide for 2026. Master Havoc extraction, All-Out Warfare, all operators (Red Wolf, Weilong, Silver Wing, Hive Medic), meta weapons, maps, economy tips, and beginner strategies."
+  currentPage="home"
+>
+  <HeroSection />
+  <section class="section" style="padding-top: var(--space-2xl);">
+    <div class="container"><SearchBar /></div>
+  </section>
+  <section class="container" id="articles">
+    <FilterBar categories={categories} />
+    <AdSlot position="header" />
+    <div class="articles-grid">
+      {all.map((entry) => <ArticleCard entry={entry} />)}
+    </div>
+  </section>
+</BaseLayout>
