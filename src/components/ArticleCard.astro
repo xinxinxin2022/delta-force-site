@@ -1,0 +1,47 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  entry: CollectionEntry<'articles'>;
+}
+const { entry } = Astro.props;
+const { data, id } = entry;
+const slug = id.replace('.mdx', '');
+
+const categoryLabels: Record<string, string> = {
+  overview: 'Overview',
+  mode: 'Game Mode',
+  operator: 'Operator',
+  weapon: 'Weapons',
+  map: 'Map',
+  economy: 'Economy',
+  beginner: 'Beginner',
+  season: 'Season Update',
+};
+
+const categoryClasses: Record<string, string> = {
+  overview: 'cat-overview',
+  mode: 'cat-mode',
+  operator: 'cat-operator',
+  weapon: 'cat-weapon',
+  map: 'cat-map',
+  economy: 'cat-economy',
+  beginner: 'cat-beginner',
+  season: 'cat-season',
+};
+
+const heroUrl = `https://cdn.jsdelivr.net/gh/guoyx/delta-force-site@images-v1/images/${data.heroImage}`;
+const articleUrl = `/articles/${slug}.html`;
+---
+<article class="article-card" data-category={categoryClasses[data.category] || `cat-${data.category}`}>
+  <img class="card-image-real" src={heroUrl} alt={data.title} loading="lazy">
+  <div class="card-body">
+    <span class="card-category {categoryClasses[data.category] || ''}">{categoryLabels[data.category] || data.category}</span>
+    <h3 class="card-title"><a href={articleUrl}>{data.title}</a></h3>
+    <p class="card-excerpt">{data.description}</p>
+    <div class="card-meta">
+      <time datetime={data.pubDate.toISOString()}>{data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</time>
+      <span class="read-time">📖 {data.readTime} min read</span>
+    </div>
+  </div>
+</article>

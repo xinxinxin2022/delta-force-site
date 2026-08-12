@@ -1254,3 +1254,83 @@ img {
   font-size: 0.8rem;
   font-weight: 700;
 }
+
+/* === MDX Component Styles === */
+.article-image {
+  margin: 2rem 0;
+}
+.article-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+.article-image-caption {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+.image-gallery {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.image-gallery figure { margin: 0; }
+.image-gallery img { width: 100%; border-radius: 8px; }
+.callout {
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  border-left: 4px solid;
+}
+.callout-tip { background: rgba(245,158,11,0.08); border-color: #f59e0b; }
+.callout-warning { background: rgba(239,68,68,0.08); border-color: #ef4444; }
+.callout-info { background: rgba(59,130,246,0.08); border-color: #3b82f6; }
+.callout-success { background: rgba(16,185,129,0.08); border-color: #10b981; }
+.callout-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+.callout-content p { margin: 0.5rem 0 0; }
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+.comparison-table th,
+.comparison-table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+.comparison-table th {
+  background: var(--bg-card);
+  font-weight: 600;
+}
+.comparison-table tr:nth-child(even) td {
+  background: rgba(26,34,53,0.5);
+}
+.table-wrapper { overflow-x: auto; }
+.article-toc {
+  position: sticky;
+  top: 80px;
+  background: var(--bg-card);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.article-toc h3 {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+.article-toc ul { list-style: none; padding: 0; margin: 0; }
+.article-toc li { margin: 0.25rem 0; }
+.article-toc .toc-h3 { padding-left: 1rem; }
+.article-toc a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+.article-toc a:hover { color: var(--accent-primary); }

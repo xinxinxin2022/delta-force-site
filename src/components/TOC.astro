@@ -1,0 +1,27 @@
+---
+// Server-side: no props needed. TOC is built client-side from DOM headings.
+---
+<nav class="article-toc" aria-label="Table of Contents">
+  <h3>On this page</h3>
+  <ul id="toc-list"></ul>
+</nav>
+
+<script>
+  const headings = document.querySelectorAll('.article-content h2, .article-content h3');
+  const tocList = document.getElementById('toc-list');
+  if (!tocList || headings.length === 0) {
+    const nav = document.querySelector('.article-toc');
+    if (nav) nav.style.display = 'none';
+  } else {
+    headings.forEach((h) => {
+      if (!h.id) h.id = h.textContent.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      const li = document.createElement('li');
+      li.className = h.tagName === 'H3' ? 'toc-h3' : 'toc-h2';
+      const a = document.createElement('a');
+      a.href = `#${h.id}`;
+      a.textContent = h.textContent;
+      li.appendChild(a);
+      tocList.appendChild(li);
+    });
+  }
+</script>

@@ -1,0 +1,13 @@
+---
+interface Props {
+  categories: { key: string; label: string }[];
+}
+const { categories } = Astro.props;
+---
+<div class="filter-bar">
+  {categories.map((cat, i) => (
+    <button class:list={{ 'filter-btn': true, active: i === 0 }} data-filter={cat.key === 'all' ? 'all' : `cat-${cat.key}`}>
+      {cat.label}
+    </button>
+  ))}
+</div>

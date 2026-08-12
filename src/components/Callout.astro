@@ -1,0 +1,25 @@
+---
+interface Props {
+  type?: 'tip' | 'warning' | 'info' | 'success';
+  title?: string;
+}
+const { type = 'info', title } = Astro.props;
+
+const icons: Record<string, string> = {
+  tip: '💡',
+  warning: '️',
+  info: '',
+  success: '✅',
+};
+
+const defaultTitles: Record<string, string> = {
+  tip: 'Pro Tip',
+  warning: 'Warning',
+  info: 'Note',
+  success: 'Success',
+};
+---
+<div class={`callout callout-${type}`}>
+  <div class="callout-title">{icons[type]} {title || defaultTitles[type]}</div>
+  <div class="callout-content"><slot /></div>
+</div>

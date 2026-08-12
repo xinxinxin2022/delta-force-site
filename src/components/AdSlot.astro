@@ -1,0 +1,20 @@
+---
+interface Props {
+  position?: 'header' | 'in-article' | 'bottom' | 'sidebar';
+}
+const { position = 'in-article' } = Astro.props;
+---
+<div class="ad-slot" data-position={position}>
+  <div class="ad-slot-label">Advertisement</div>
+  <ins
+    class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-1812733940760212"
+    data-ad-slot={position}
+    data-ad-format="auto"
+    data-full-width-responsive="true"
+  ></ins>
+</div>
+<script is:inline>
+  try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch(e) {}
+</script>
