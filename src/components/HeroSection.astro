@@ -1,5 +1,8 @@
+---
+import { IMAGE_BASE_URL } from '../lib/constants.ts';
+---
 <section class="hero">
-  <img src="/images/hero-bg.jpg" alt="" class="hero-bg-img" aria-hidden="true">
+  <img src={`${IMAGE_BASE_URL}hero-bg.jpg`} alt="" class="hero-bg-img" aria-hidden="true">
   <canvas class="hero-canvas"></canvas>
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -8,7 +11,7 @@
     <p class="hero-subtitle">Your definitive resource for mastering every operator, weapon, map, and game mode. Up-to-date strategies for Havoc extraction and All-Out Warfare in 2026.</p>
     <div class="hero-cta">
       <a href="#articles" class="btn btn-primary">Browse Guides</a>
-      <a href="/articles/delta-force-complete-guide.html" class="btn btn-secondary">Getting Started</a>
+      <a href="/articles/delta-force-complete-guide/" class="btn btn-secondary">Getting Started</a>
     </div>
   </div>
 </section>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import type { CollectionEntry } from 'astro:content';
+import { IMAGE_BASE_URL } from '../lib/constants.ts';
 
 interface Props {
   entry: CollectionEntry<'articles'>;
@@ -11,7 +12,7 @@ const { data, id } = entry;
 const slug = id.replace('.mdx', '');
 
 const articleUrl = `https://game-delta.asia/articles/${slug}/`;
-const heroImageUrl = `https://cdn.jsdelivr.net/gh/guoyx/delta-force-site@images-v1/images/${data.heroImage}`;
+const heroImageUrl = `${IMAGE_BASE_URL}${data.heroImage}`;
 
 const categoryNames: Record<string, string> = {
   overview: 'Overview',

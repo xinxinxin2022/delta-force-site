@@ -1,4 +1,5 @@
 ---
+import { IMAGE_BASE_URL } from '../lib/constants.ts';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AdSlot from '../components/AdSlot.astro';
 import ArticleCard from '../components/ArticleCard.astro';
@@ -15,7 +16,7 @@ const mapArticles = articles.filter(a => a.data.category === 'map');
   currentPage="maps"
 >
   <section class="hero hero-category">
-    <img src="/images/cover-damzero.jpg" alt="Dam Zero Map" class="hero-bg-img" aria-hidden="true">
+    <img src={`${IMAGE_BASE_URL}cover-damzero.jpg`} alt="Dam Zero Map" class="hero-bg-img" aria-hidden="true">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <nav class="breadcrumb" aria-label="Breadcrumb">

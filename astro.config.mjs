@@ -1,10 +1,8 @@
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import { IMAGE_BASE_URL, SITE_URL } from './src/lib/constants.ts';
 
-export const IMAGE_BASE_URL =
-  'https://cdn.jsdelivr.net/gh/guoyx/delta-force-site@images-v1/images/';
-
-export const SITE_URL = 'https://game-delta.asia';
+export { IMAGE_BASE_URL };
 
 export default {
   site: SITE_URL,

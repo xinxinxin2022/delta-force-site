@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { IMAGE_BASE_URL } from '../lib/constants.ts';
 
 interface Props {
   entry: CollectionEntry<'articles'>;
@@ -30,7 +31,7 @@ const categoryClasses: Record<string, string> = {
   season: 'cat-season',
 };
 
-const heroUrl = `https://cdn.jsdelivr.net/gh/guoyx/delta-force-site@images-v1/images/${data.heroImage}`;
+const heroUrl = `${IMAGE_BASE_URL}${data.heroImage}`;
 const articleUrl = `/articles/${slug}/`;
 ---
 <article class="article-card" data-category={categoryClasses[data.category] || `cat-${data.category}`}>
