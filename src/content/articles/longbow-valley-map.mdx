@@ -1,0 +1,194 @@
+---
+title: "Longbow Valley Map Guide — Diamond Queen Hotel, Radar Station & Knife Run Routes"
+description: "Complete Longbow Valley map guide for Delta Force: Hawk Ops. Learn Diamond Queen Hotel loot spots, Radar Station routes, knife run strategies, and how to extract with 5M+ coin hauls."
+pubDate: 2026-07-20
+updatedDate: 2026-07-24
+category: map
+heroImage: "cover-longbow.jpg"
+readTime: 9
+tags: ["longbow-valley", "map-guide", "knife-run", "havoc"]
+featured: false
+---
+
+import Callout from '../../components/Callout.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import AdSlot from '../../components/AdSlot.astro';
+
+**Longbow Valley** is the first "complex" map you unlock in Delta Force: Hawk Ops **Havoc Operations** mode at **Level 7**. It's the training wheels before you tackle Bakhsh or Aerospace Base — but don't let that fool you. With a generous **35-minute timer**, two AI factions roaming the hills, and the juiciest fixed loot this side of the endgame, Longbow Valley is where most players print their first serious **Havoc Coins**.
+
+In this guide, we'll break down every high-value POI, the fastest knife run routes, which room keys are actually worth buying, and the exact loot path that maximizes your extraction rate. By the time you finish, you'll be leaving the valley with 500K–2M coins per run — on a budget loadout.
+
+<Callout type="info" title="Map at a Glance">
+**Unlock:** Level 7 · **Timer:** 35 minutes · **Enemy Factions:** 2 (PMC + Militia) · **Fixed Loot Points:** ~30 · **Key Feature:** Higher quality loot than earlier maps
+</Callout>
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" class="article-svg-image" role="img" aria-label="Longbow Valley map overview showing key locations">
+  <defs>
+    <linearGradient id="lvBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e17"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="hotelGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radarGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#lvBg)"/>
+  
+  <path d="M 0 320 Q 200 280 400 310 T 800 290" stroke="#1f2a40" stroke-width="1" fill="none" opacity="0.6"/>
+  <path d="M 0 260 Q 200 220 400 250 T 800 230" stroke="#1f2a40" stroke-width="1" fill="none" opacity="0.4"/>
+  <path d="M 0 200 Q 200 160 400 190 T 800 170" stroke="#1f2a40" stroke-width="1" fill="none" opacity="0.3"/>
+  
+  <path d="M 80 200 L 280 200 L 400 180 L 560 200 L 720 200" stroke="#374151" stroke-width="3" fill="none" stroke-dasharray="2,4"/>
+  <path d="M 400 60 L 400 180 L 400 340" stroke="#374151" stroke-width="2" fill="none" stroke-dasharray="2,4"/>
+  
+  <circle cx="80" cy="200" r="28" fill="url(#radarGlow)"/>
+  <rect x="60" y="185" width="40" height="30" fill="#1a2235" stroke="#3b82f6" stroke-width="1.5" rx="3"/>
+  <text x="80" y="245" text-anchor="middle" fill="#9ca3af" font-size="11" font-family="sans-serif">Blue Harbor</text>
+  <text x="80" y="259" text-anchor="middle" fill="#60a5fa" font-size="10" font-family="sans-serif">Dock</text>
+  
+  <rect x="240" y="185" width="36" height="28" fill="#1a2235" stroke="#10b981" stroke-width="1.5" rx="3"/>
+  <text x="258" y="230" text-anchor="middle" fill="#9ca3af" font-size="11" font-family="sans-serif">Checkpoint</text>
+  
+  <circle cx="480" cy="160" r="55" fill="url(#hotelGlow)"/>
+  <rect x="445" y="125" width="70" height="70" fill="#1a2235" stroke="#f59e0b" stroke-width="2" rx="4"/>
+  <text x="480" y="155" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="700" font-family="sans-serif">DIAMOND</text>
+  <text x="480" y="170" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="700" font-family="sans-serif">QUEEN</text>
+  <text x="480" y="185" text-anchor="middle" fill="#fbbf24" font-size="10" font-family="sans-serif">HOTEL</text>
+  <text x="480" y="215" text-anchor="middle" fill="#f59e0b" font-size="10" font-weight="600" font-family="sans-serif">★ T0 LOOT</text>
+  
+  <circle cx="680" cy="160" r="45" fill="url(#radarGlow)"/>
+  <polygon points="680,130 710,175 650,175" fill="#1a2235" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="665" y="160" width="30" height="20" fill="#1a2235" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="680" y="210" text-anchor="middle" fill="#9ca3af" font-size="11" font-family="sans-serif">Radar</text>
+  <text x="680" y="224" text-anchor="middle" fill="#60a5fa" font-size="11" font-weight="600" font-family="sans-serif">Station</text>
+  
+  <rect x="440" y="300" width="55" height="35" fill="#1a2235" stroke="#ef4444" stroke-width="1.5" rx="3"/>
+  <text x="467" y="322" text-anchor="middle" fill="#fca5a5" font-size="10" font-weight="600" font-family="sans-serif">King's</text>
+  <text x="467" y="334" text-anchor="middle" fill="#fca5a5" font-size="9" font-family="sans-serif">Room</text>
+  
+  <circle cx="40" cy="60" r="10" fill="none" stroke="#10b981" stroke-width="2"/>
+  <text x="40" y="64" text-anchor="middle" fill="#10b981" font-size="12" font-family="sans-serif">⇧</text>
+  <text x="40" y="90" text-anchor="middle" fill="#6b7280" font-size="9" font-family="sans-serif">Extract N</text>
+  <circle cx="760" cy="340" r="10" fill="none" stroke="#10b981" stroke-width="2"/>
+  <text x="760" y="344" text-anchor="middle" fill="#10b981" font-size="12" font-family="sans-serif">⇧</text>
+  <text x="760" y="370" text-anchor="middle" fill="#6b7280" font-size="9" font-family="sans-serif">Extract SE</text>
+  
+  <path d="M 80 200 Q 250 170 480 160 Q 600 155 680 160" stroke="#f59e0b" stroke-width="1.5" fill="none" stroke-dasharray="5,3" marker-end="url(#arrowLv)"/>
+  <defs>
+    <marker id="arrowLv" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  
+  <rect x="20" y="340" width="160" height="50" fill="#111827" stroke="#2a3450" stroke-width="1" rx="4"/>
+  <circle cx="35" cy="355" r="4" fill="#f59e0b"/>
+  <text x="45" y="359" fill="#9ca3af" font-size="9" font-family="sans-serif">T0 High Value</text>
+  <circle cx="35" cy="375" r="4" fill="#3b82f6"/>
+  <text x="45" y="379" fill="#9ca3af" font-size="9" font-family="sans-serif">Major Loot</text>
+  <circle cx="110" cy="355" r="4" fill="#10b981"/>
+  <text x="120" y="359" fill="#9ca3af" font-size="9" font-family="sans-serif">Extract</text>
+  <line x1="105" y1="375" x2="130" y2="375" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="135" y="379" fill="#9ca3af" font-size="9" font-family="sans-serif">Route</text>
+</svg>
+
+Longbow Valley key locations: Diamond Queen Hotel (T0), Radar Station, Blue Harbor Dock, Checkpoint, and King's Room.
+
+## Map Overview & Unlock Requirements
+
+Longbow Valley unlocks as soon as you hit **Level 7**, making it the natural next step after the starter maps. The 35-minute timer is generous by Havoc Operations standards — plenty of time to loot thoroughly, fight AI, and still walk to an extraction. You'll be competing against **two AI enemy factions** (PMC and Militia), which makes the map busier but considerably less dangerous than the player-heavy zones of Bakhsh.
+
+The real draw? **Loot quality**. Longbow Valley has the highest baseline loot tier of any map available at this progression point. That means better weapon mods, higher-tier armor, and — most importantly — room keys that pay for themselves in a single run.
+
+## Key Areas & Loot Locations
+
+### Diamond Queen Hotel ⭐ (T0 — Highest Value)
+
+The centerpiece of Longbow Valley. The hotel has **multiple floors, locked rooms, and the infamous 5M coin room key** — the single most valuable key in the game at this tier. Even without the top-tier key, the hotel's common rooms drop consistent mid-tier loot. Expect to run into other players here; it's the most popular POI on the map.
+
+<Callout type="warning" title="Pro Tip">
+Dock teams often sprint for the hotel the second the match starts. If you spawn on the left side, consider a counter-route through the Checkpoint first — you'll arrive 60 seconds later but with full situational awareness.
+</Callout>
+
+### Radar Station (T1 — Major Loot)
+
+A mid-sized compound on the eastern edge with consistent **blue+ loot spawns**. The Radar Station is less contested than the hotel and makes an excellent first stop for teams that spawn right-side. Clear the station, then rotate toward the hotel while other teams are still fighting the AI.
+
+### Blue Harbor Dock (T1)
+
+The westernmost POI. Great for **left-side spawns** because it's usually uncontested early. The dock containers hold mid-tier loot and occasional weapon mods. Grab what's useful and push inland.
+
+### Checkpoint (T1–T2)
+
+The central crossroads. Not the juiciest loot on the map, but it's a solid **rotational waypoint** between the dock, hotel, and radar station. The military crates here often contain ammo and medical supplies — useful if you're running a knife loadout.
+
+### King's Room (T0 — Most Expensive Key)
+
+A small locked structure near the hotel with the **most expensive room key in Longbow Valley**. The loot inside is high quality, but the key cost means you need a reliable run to justify buying it. Only invest once you have the extraction routes memorized.
+
+<AdSlot position="in-article" />
+
+## Knife Run Strategy: The 35-Minute Hustle
+
+A "knife run" in Delta Force means going in with minimal gear and maximum loot focus. Longbow Valley is the **best map for practicing knife runs** because the 35-minute timer and two AI factions mean you can usually avoid other players entirely — if you plan your route.
+
+### Recommended Priority: Radar → Hotel
+
+1. **Spawn → Blue Harbor Dock** (30 sec): grab any obvious loot.
+2. **Dock → Checkpoint** (90 sec): quick sweep of military crates.
+3. **Checkpoint → Radar Station** (2 min): clear thoroughly. This is your insurance loot.
+4. **Radar → Hotel** (3 min): arrive mid-game when dock teams are extracting. Loot the hotel with reduced risk.
+5. **Hotel → Extraction** (5 min): walk south or east depending on your spawn.
+
+### Exploration Routes by Spawn
+
+<ComparisonTable
+  headers={["Spawn Side", "First Stop", "Second Stop", "Extraction", "Expected Loot"]}
+  rows={[
+    ["West (left)", "Blue Harbor Dock", "Checkpoint → Hotel", "North Extract", "400K–800K"],
+    ["East (right)", "Radar Station", "Hotel", "SE Extract", "500K–1.2M"],
+    ["South", "King's Room", "Hotel", "SE Extract", "600K–1.5M"],
+  ]}
+/>
+
+<Callout type="success" title="Knife Run Loadout">
+Bring a pistol or suppressed SMG, a single mag of ammo, one medkit, and **leave your best armor at home**. If you die in a knife run, you should lose less than 50K. That's the whole point.
+</Callout>
+
+<AdSlot position="in-article" />
+
+## Room Key Priority
+
+Not every room key is worth buying. Here's the priority for Longbow Valley keys, ranked by ROI (return on investment):
+
+| Key | Cost | Expected Value | Tier |
+|-----|------|----------------|------|
+| 5M Coin Room (Hotel) | ~1.5M | 3M–10M | T0 |
+| King's Room | ~800K | 1M–3M | T0 |
+| Hotel Suite B | ~300K | 400K–900K | T1 |
+| Radar Office | ~150K | 200K–500K | T1 |
+| Dock Container | ~50K | 60K–200K | T2 |
+
+## Extraction Tips & Timings
+
+The **North Extraction** is the safest for west-side runs but has a longer walk from the hotel. The **Southeast Extraction** is faster from the hotel and King's Room, but you'll pass through open terrain near the Radar Station — be ready for a fight.
+
+- Plan extraction with **at least 10 minutes remaining** on the timer.
+- If you have 500K+ in loot, don't get greedy — the hotel will still be there next run.
+- Listen for the plane; it signals the last 10 minutes and spawns the most player activity.
+
+<AdSlot position="in-article" />
+
+## Summary: The Longbow Valley Loop
+
+Longbow Valley is the **best coin-per-hour map** available before Level 15. Learn it inside out, master the knife run routes, and save your expensive room keys for when you have the extraction routes burned into muscle memory. Once you're consistently walking out with 500K+ per run, you're ready to step up to Bakhsh and Aerospace Base — where the real money is made.
+
+<Callout type="info" title="Continue Learning">
+Next up: our [Bakhsh & Aerospace Base Guide](/articles/bakhsh-aerospace-base.html) for T1 complex maps, or the [Complete Economy Guide](/articles/economy-guide.html) to turn your loot into long-term wealth.
+</Callout>
+
+<AdSlot position="bottom" />

@@ -1,0 +1,192 @@
+---
+title: "Silver Wing Operator Guide — Recon Drone & Info Warfare in Delta Force"
+description: "Complete Silver Wing operator guide for Delta Force: Hawk Ops. Master footprint tracking, the Hummingbird Camera, Falcon Drone pulse tactics, and intel-based playstyle to dominate Havoc and All-Out Warfare."
+pubDate: 2026-07-20
+updatedDate: 2026-07-24
+category: "operator"
+heroImage: "cover-silverwing.jpg"
+readTime: 9
+tags: ["silver-wing", "operator", "recon"]
+featured: false
+---
+
+import Callout from '../../components/Callout.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import AdSlot from '../../components/AdSlot.astro';
+
+If you like playing the information game — watching the map, reading enemy movement, and letting your team win fights before they start — **Silver Wing** is one of the most rewarding operators in *Delta Force: Hawk Ops*. She does not win 1v1 duels. She wins rounds by making sure her team always knows where the enemy is, and by shutting down enemy gadgets at the worst possible moment for them.
+
+This guide breaks down every ability, the core combos, the ideal playstyle loop, and how she fits into both **Havoc** extraction and **All-Out Warfare** ranked. We will also be honest about her weaknesses — because Silver Wing punished hard by players who try to play her like an assault operator.
+
+<AdSlot position="in-article" />
+
+{/* Inline SVG: Silver Wing Operator Card */}
+<figure class="article-image">
+<svg class="article-hero-svg" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Silver Wing operator card with tactical drone illustration">
+  <defs>
+    <linearGradient id="swBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0e17"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="swAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <filter id="swGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="400" fill="url(#swBg)"/>
+  
+  <g stroke="#1a2235" stroke-width="1" opacity="0.5">
+    <path d="M0 80 L800 80 M0 160 L800 160 M0 240 L800 240 M0 320 L800 320"/>
+    <path d="M160 0 L160 400 M320 0 L320 400 M480 0 L480 400 M640 0 L640 400"/>
+  </g>
+  
+  <g transform="translate(400 200)" filter="url(#swGlow)">
+    <ellipse cx="0" cy="0" rx="80" ry="20" fill="#1a2235" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="-14" y="-14" width="28" height="28" rx="4" fill="#0a0e17" stroke="#3b82f6" stroke-width="2"/>
+    <circle cx="0" cy="0" r="6" fill="#f59e0b"/>
+    
+    <g stroke="#3b82f6" stroke-width="3" fill="none">
+      <line x1="-70" y1="-10" x2="-50" y2="-10"/>
+      <line x1="50" y1="-10" x2="70" y2="-10"/>
+      <line x1="-70" y1="10" x2="-50" y2="10"/>
+      <line x1="50" y1="10" x2="70" y2="10"/>
+      <circle cx="-60" cy="-10" r="22" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+      <circle cx="60" cy="-10" r="22" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+      <circle cx="-60" cy="10" r="22" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+      <circle cx="60" cy="10" r="22" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+    </g>
+  </g>
+  
+  <g fill="#10b981" opacity="0.7">
+    <circle cx="120" cy="320" r="4"/><circle cx="160" cy="310" r="4"/><circle cx="200" cy="305" r="4"/>
+    <circle cx="240" cy="302" r="4"/><circle cx="280" cy="300" r="4"/>
+  </g>
+  
+  <g transform="translate(40 50)">
+    <rect width="220" height="90" rx="8" fill="#1a2235" stroke="url(#swAccent)" stroke-width="2"/>
+    <text x="20" y="35" fill="#f59e0b" font-family="Rajdhani, sans-serif" font-size="22" font-weight="700">SILVER WING</text>
+    <text x="20" y="58" fill="#9ca3af" font-family="Inter, sans-serif" font-size="12">RECON OPERATOR · INTEL WARFARE</text>
+    <text x="20" y="78" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="11">▸ TIER T1 ~ T1.5</text>
+  </g>
+  
+  <g transform="translate(540 50)">
+    <rect width="220" height="90" rx="8" fill="#1a2235" stroke="#3b82f6" stroke-width="2"/>
+    <text x="20" y="30" fill="#9ca3af" font-family="Inter, sans-serif" font-size="11">PASSIVE</text>
+    <text x="100" y="30" fill="#e8eaf0" font-family="Inter, sans-serif" font-size="11">Footprint Track · 10 min</text>
+    <text x="20" y="55" fill="#9ca3af" font-family="Inter, sans-serif" font-size="11">FALCON RANGE</text>
+    <text x="120" y="55" fill="#f59e0b" font-family="Inter, sans-serif" font-size="11" font-weight="700">90 m</text>
+    <text x="20" y="78" fill="#9ca3af" font-family="Inter, sans-serif" font-size="11">GRENADE</text>
+    <text x="100" y="78" fill="#e8eaf0" font-family="Inter, sans-serif" font-size="11">Pulse · EM Interference</text>
+  </g>
+</svg>
+<figcaption>Silver Wing operator card showcasing tactical drone illustration, abilities, and performance stats</figcaption>
+</figure>
+
+## Passive — Footprint Tracking (10 Minutes)
+
+Silver Wing's passive is what makes her unique among all operators in the game. For the first **10 minutes of each match**, she can see enemy footprints on the ground. These are not faint hints — they are clear directional trails that tell you which way a squad just moved, how many players were in it (by the density of prints), and roughly how fresh the track is.
+
+### What the passive actually does
+
+- Reveals footprints on most ground surfaces for the first 10 minutes of the match.
+- Footprints fade over time — fresh prints are brighter and easier to read.
+- Works through walls when you are at the right elevation angle — useful on Dam Zero's multi-level buildings.
+- Stops working entirely after the 10-minute mark, so the early game is her power spike.
+
+<Callout type="info" title="Intel Note">
+Use the first 10 minutes to build map control. Once the passive fades, you should already have camera coverage set up so you do not lose information.
+</Callout>
+
+### Tracking tactics
+
+Footprints are most useful in three situations: **rotations between loot zones**, **third-party checks** when you hear a fight, and **extraction denial** at the end of the match. In Havoc, learning to read a trail's age is the difference between walking into an ambush and taking the enemy's freshly-looted gold.
+
+## Abilities — Hummingbird, Falcon & Grand
+
+### Hummingbird Camera (Tactical Deployable)
+
+The Hummingbird is a small camera you can stick to walls, ceilings, crates, or doorframes. It gives you a live feed you can check at any time, and — this is the important part — it **pings enemies that move in front of it**. You can have multiple cameras up at once, which lets you build a persistent surveillance network across a loot zone.
+
+| Property | Value |
+|---|---|
+| Max deployed | Multiple (practical limit ~4 active feeds) |
+| Pings enemies | Yes, on movement |
+| Destroyable | Yes — shootable by enemies |
+| Best placement | High corners, doorframes, loot-room ceilings |
+
+### Falcon Drone (90m Range, Pulse Grenade)
+
+The Falcon is Silver Wing's signature tool. It is a manually piloted drone with a **90-meter operational range** that carries a **pulse grenade**. When the pulse detonates, it does two things:
+
+1. Reveals enemies in the blast radius through walls for a short duration.
+2. Applies **electronic interference** — disabling enemy gadgets, cameras, mines, and operator abilities for a few seconds.
+
+The interference is what elevates Silver Wing from "nice to have" to "ban or pick." A well-timed pulse on a contested extraction point blinds Hive Medic's healing smoke, disables Veljko's traps, and bricks any camera network the other team has set up.
+
+### Grand — Electronic Interference Field
+
+Silver Wing's ultimate drops a large-area interference field. Everything inside it — friend or foe — loses gadget functionality. Use it to force a fair gunfight against gadget-heavy comps, or to deny an enemy operator their entire kit during a push.
+
+<Callout type="warning" title="Warning">
+Your own team's cameras and gadgets also stop working inside the Grand. Communicate before popping ult — nobody likes their Hummingbird feed cut right as they push.
+</Callout>
+
+<AdSlot position="in-article" />
+
+## Playstyle — Scout First, Shoot Later
+
+Silver Wing's core loop is simple in theory and hard in practice: **gather information, share it with your team, act on it together**. The fastest way to fail as Silver Wing is to treat her like a frag-pusher. Her gun skill matters less than her map sense.
+
+### The five rules of Silver Wing
+
+1. **Scout before you enter.** Never walk into a loot zone cold. Send the Falcon first, or drop a Hummingbird from an angle you control.
+2. **Deploy cameras early and high.** A Hummingbird on the second-floor doorframe of the Admin Center tells you more than an entire sweep of the ground floor.
+3. **Avoid 1v1s unless you have information advantage.** If you are fighting an enemy who knows exactly where you are because you forgot to check your cameras, you are playing Silver Wing wrong.
+4. **Save pulse for the important moment.** The Falcon's pulse grenade has a cooldown. Do not waste it on a single enemy you already spotted — save it for the push, the extraction, or the counter-ult.
+5. **Call your information out loud.** Silver Wing without comms is half an operator. Ping the map, use voice, type — just make sure your team benefits from what you see.
+
+### Havoc extraction role
+
+In Havoc, Silver Wing is the team's early-game scout and mid-game shot-caller. Open the match by pushing ahead of your squad, laying camera coverage along your extraction path. Once you have value (gold, keycards), switch to a defensive posture — let the passive and cameras do the work, and only fight when the fight is favorable.
+
+### All-Out Warfare role
+
+In ranked, Silver Wing's job is **area denial through information**. She makes it dangerous for the enemy to rotate, dangerous to push, and dangerous to use gadgets. Pair her with a shot-caller and she elevates the entire team's ceiling.
+
+## Core Combos
+
+<ComparisonTable
+  headers={["Combo", "Setup", "Result"]}
+  rows={[
+    ["Camera → Pulse Reveal", "Place Hummingbird at chokepoint, wait for ping, then Falcon-pulse the area", "Confirms exact enemy count and position through walls before the push"],
+    ["Grand + Squad Push", "Pop Grand on objective, squad pushes while enemy gadgets are dead", "Forces a pure aimfight that favors the coordinating team"],
+    ["Falcon Recon + Flank", "Pulse from one angle, squad rotates through the blind spot", "Catches enemies watching the wrong direction"],
+  ]}
+/>
+
+## Tier Placement — T1 ~ T1.5
+
+Silver Wing sits solidly in **T1** for coordinated play and drops to around **T1.5** in solo-queue where her information advantage cannot be fully communicated. She is not meta-breaking the way a top-tier weapon can, but she consistently wins games for teams that use her correctly. In pubs, expect to carry less — in ranked stacks, expect to be the reason the enemy team feels like they are playing blind.
+
+<Callout type="success" title="Bottom Line">
+Silver Wing rewards patience, map knowledge, and communication over raw aim. If that is your playstyle, she is one of the most satisfying operators in the game — and one of the hardest to play against.
+</Callout>
+
+<AdSlot position="in-article" />
+
+## Weaknesses to Know
+
+- **Weak in direct 1v1s.** Her kit does nothing to help her win a snap gunfight.
+- **Passive expires.** After 10 minutes she loses her unique advantage unless she has already built camera coverage.
+- **Cameras are destroyable.** A competent enemy team will sweep your Hummingbirds — treat them as consumables.
+- **Solo-queue ceiling is lower.** Without comms, information you gather does not reach your team.
+
+<Callout type="info" title="What's Next?">
+Pair Silver Wing with the right intel and firepower. Check out our [Hive Medic guide](/articles/hive-medic-operator.html) for the best support partner, the [Weapon Tier List](/articles/weapon-tier-list.html) for current meta picks, and the [Dam Zero Map Guide](/articles/dam-zero-map.html) for the best map to practice recon on.
+</Callout>
+
+<AdSlot position="bottom" />

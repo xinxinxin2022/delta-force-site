@@ -1,0 +1,195 @@
+---
+title: "Bakhsh & Aerospace Base Map Guide — Babel Tower, Museum & Gold Spawn Locations"
+description: "Complete Bakhsh and Aerospace Base guide for Delta Force: Hawk Ops. Babel Tower Control Zone, Museum loot, gold spawn locations, tower pull-switch extraction, and pro strategies."
+pubDate: 2026-07-21
+updatedDate: 2026-07-24
+category: map
+heroImage: "cover-bakhsh.jpg"
+readTime: 12
+tags: ["bakhsh", "aerospace-base", "map-guide", "havoc"]
+featured: false
+---
+
+import Callout from '../../components/Callout.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import AdSlot from '../../components/AdSlot.astro';
+
+Welcome to the **big leagues**. If Longbow Valley was your training ground, **Bakhsh** and **Aerospace Base** are where Delta Force: Hawk Ops separates the loot-seekers from the extraction artists. Both are classified as "complex" maps — denser, more vertical, more contested, and loaded with the highest-quality loot in the game.
+
+This combined guide breaks down every major POI on both maps: the **Babel Tower Control Zone**, the **Museum complex**, the **Aerospace fuel depot**, the **Centrifuge Room underground**, and — most importantly — the exact routes that get you in, loaded, and out alive.
+
+<Callout type="info" title="Dual Map Snapshot">
+**Bakhsh:** Museum + Babel Tower, 8 free safe points, tower pull-switch extraction (4 min countdown)
+**Aerospace Base:** Highest resource density, 3 core zones, ~22 loot points, Prison Zone, CEO Office speedrun
+</Callout>
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" class="article-svg-image" role="img" aria-label="Bakhsh and Aerospace Base dual map comparison">
+  <defs>
+    <linearGradient id="abBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e17"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="towerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#abBg)"/>
+  
+  <line x1="400" y1="20" x2="400" y2="380" stroke="#2a3450" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="200" y="35" text-anchor="middle" fill="#f59e0b" font-size="16" font-weight="700" font-family="sans-serif">BAKHSH</text>
+  <text x="600" y="35" text-anchor="middle" fill="#3b82f6" font-size="16" font-weight="700" font-family="sans-serif">AEROSPACE BASE</text>
+
+  
+  
+  <rect x="50" y="70" width="140" height="80" fill="#1a2235" stroke="#10b981" stroke-width="1.5" rx="4"/>
+  <text x="120" y="100" text-anchor="middle" fill="#6ee7b7" font-size="12" font-weight="600" font-family="sans-serif">Museum</text>
+  <text x="120" y="118" text-anchor="middle" fill="#6b7280" font-size="9" font-family="sans-serif">T1 Loot · Complex</text>
+  
+  <rect x="240" y="70" width="110" height="180" fill="#1a2235" stroke="#f59e0b" stroke-width="2" rx="4"/>
+  <rect x="255" y="85" width="80" height="30" fill="url(#towerGrad)" opacity="0.15" stroke="#f59e0b" stroke-width="1" rx="2"/>
+  <text x="295" y="105" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="700" font-family="sans-serif">Ocean Hall</text>
+  <rect x="255" y="125" width="80" height="30" fill="url(#towerGrad)" opacity="0.15" stroke="#f59e0b" stroke-width="1" rx="2"/>
+  <text x="295" y="145" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="700" font-family="sans-serif">Interrogation</text>
+  <rect x="255" y="165" width="80" height="30" fill="url(#towerGrad)" opacity="0.15" stroke="#f59e0b" stroke-width="1" rx="2"/>
+  <text x="295" y="185" text-anchor="middle" fill="#fbbf24" font-size="10" font-weight="700" font-family="sans-serif">Three Red</text>
+  <text x="295" y="200" text-anchor="middle" fill="#fbbf24" font-size="10" font-weight="700" font-family="sans-serif">Phantoms</text>
+  <text x="295" y="235" text-anchor="middle" fill="#f59e0b" font-size="12" font-weight="700" font-family="sans-serif">BABEL TOWER</text>
+  <text x="295" y="250" text-anchor="middle" fill="#f59e0b" font-size="9" font-family="sans-serif">Control Zone · T0</text>
+  
+  <circle cx="60" cy="200" r="5" fill="#10b981"/>
+  <circle cx="90" cy="220" r="5" fill="#10b981"/>
+  <circle cx="130" cy="200" r="5" fill="#10b981"/>
+  <circle cx="170" cy="230" r="5" fill="#10b981"/>
+  <circle cx="60" cy="260" r="5" fill="#10b981"/>
+  <circle cx="110" cy="280" r="5" fill="#10b981"/>
+  <circle cx="180" cy="270" r="5" fill="#10b981"/>
+  <circle cx="210" cy="300" r="5" fill="#10b981"/>
+  <text x="135" y="330" text-anchor="middle" fill="#6b7280" font-size="10" font-family="sans-serif">8 Free Safe Points</text>
+  
+  <rect x="240" y="330" width="110" height="35" fill="#1a2235" stroke="#ef4444" stroke-width="1.5" rx="3"/>
+  <text x="295" y="352" text-anchor="middle" fill="#fca5a5" font-size="10" font-weight="600" font-family="sans-serif">Pull-Switch Extract</text>
+  <text x="295" y="364" text-anchor="middle" fill="#fca5a5" font-size="9" font-family="sans-serif">4 min countdown</text>
+
+  
+  
+  <rect x="430" y="60" width="150" height="60" fill="#1a2235" stroke="#3b82f6" stroke-width="1.5" rx="4"/>
+  <text x="505" y="85" text-anchor="middle" fill="#60a5fa" font-size="11" font-weight="600" font-family="sans-serif">Control Building</text>
+  <text x="505" y="100" text-anchor="middle" fill="#60a5fa" font-size="10" font-family="sans-serif">Top Floor · T0</text>
+  
+  <rect x="600" y="60" width="170" height="60" fill="#1a2235" stroke="#3b82f6" stroke-width="1.5" rx="4"/>
+  <text x="685" y="85" text-anchor="middle" fill="#60a5fa" font-size="11" font-weight="600" font-family="sans-serif">Launch Area</text>
+  <text x="685" y="100" text-anchor="middle" fill="#60a5fa" font-size="10" font-family="sans-serif">Fuel Depot</text>
+  
+  <rect x="430" y="140" width="340" height="55" fill="#1a2235" stroke="#8b5cf6" stroke-width="1.5" rx="4"/>
+  <text x="600" y="165" text-anchor="middle" fill="#a78bfa" font-size="12" font-weight="700" font-family="sans-serif">Centrifuge Room — Underground</text>
+  <text x="600" y="180" text-anchor="middle" fill="#a78bfa" font-size="10" font-family="sans-serif">Highest Value · High Risk</text>
+  
+  <rect x="430" y="220" width="160" height="60" fill="#1a2235" stroke="#f59e0b" stroke-width="1.5" rx="4"/>
+  <text x="510" y="248" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="600" font-family="sans-serif">Prison Zone</text>
+  <text x="510" y="263" text-anchor="middle" fill="#6b7280" font-size="9" font-family="sans-serif">~22 loot points</text>
+  
+  <rect x="610" y="220" width="80" height="60" fill="#1a2235" stroke="#10b981" stroke-width="1.5" rx="3"/>
+  <text x="650" y="248" text-anchor="middle" fill="#6ee7b7" font-size="10" font-weight="600" font-family="sans-serif">Pump</text>
+  <text x="650" y="262" text-anchor="middle" fill="#6ee7b7" font-size="10" font-family="sans-serif">Room</text>
+  <rect x="700" y="220" width="70" height="60" fill="#1a2235" stroke="#ef4444" stroke-width="1.5" rx="3"/>
+  <text x="735" y="248" text-anchor="middle" fill="#fca5a5" font-size="10" font-weight="600" font-family="sans-serif">CEO</text>
+  <text x="735" y="262" text-anchor="middle" fill="#fca5a5" font-size="10" font-family="sans-serif">Office</text>
+  
+  <text x="600" y="320" text-anchor="middle" fill="#3b82f6" font-size="11" font-weight="700" font-family="sans-serif">★ HIGHEST RESOURCE DENSITY ★</text>
+  <text x="600" y="340" text-anchor="middle" fill="#6b7280" font-size="10" font-family="sans-serif">~22 fixed loot points · 3 core zones</text>
+</svg>
+
+Bakhsh (left) and Aerospace Base (right) — key locations and loot tier breakdown.
+
+## Bakhsh: Museum & Babel Tower
+
+Bakhsh is a two-part complex map: the sprawling **Museum** on the west side and the vertical **Babel Tower** on the east. Most teams specialize in one half — trying to clear both in a single run is possible but risky. The map rewards patience and positional awareness over raw speed.
+
+### Babel Tower Control Zone (T0)
+
+The iconic centerpiece of Bakhsh. The tower has three named sub-zones that every player needs to learn by name — they're the callouts you'll hear in squad comms:
+
+- **Ocean Hall** — the ground-floor lobby with medium-tier loot and heavy AI presence.
+- **Interrogation Zone** — mid-tower locked rooms with high-value intel spawns.
+- **"Three Red Phantoms"** — the top-floor trio of rooms. Highest value, highest risk. Expect company.
+
+<Callout type="warning" title="Tower Extraction — Pull-Switch">
+The Babel Tower uses a **pull-switch extraction** that starts a **4-minute countdown** once activated. You cannot leave immediately — you have to defend the switch or sprint to an alternate exit. Plan your escape before you pull it.
+</Callout>
+
+### Museum Complex
+
+The Museum is a horizontal maze of exhibition halls, storage rooms, and secret passages. It has **8 major free safe points** — loot spots that don't require keys and reliably drop mid-to-high tier items. The Museum is also less popular than the tower, making it a smart target for teams that want consistent value without the PvP gauntlet.
+
+### Key Loot Spots in Bakhsh
+
+<ComparisonTable
+  headers={["Location", "Zone", "Loot Tier", "Contest Level"]}
+  rows={[
+    ["Three Red Phantoms", "Babel Tower — Top", "T0", "Very High"],
+    ["Interrogation Zone", "Babel Tower — Mid", "T0", "High"],
+    ["Museum Main Hall", "Museum", "T1", "Medium"],
+    ["8 Free Safe Points", "Museum", "T1", "Low–Medium"],
+    ["Ocean Hall", "Babel Tower — Ground", "T1", "Medium"],
+  ]}
+/>
+
+<AdSlot position="in-article" />
+
+## Aerospace Base: Highest Resource Density
+
+Aerospace Base is the **richest map in the game** by pure loot volume. It has three core zones, a Prison Zone, a Pump Room with ~22 individual loot points, and the infamous **CEO Office** — a speedrun target for veteran teams.
+
+### The 3 Core Zones
+
+1. **Control Building Top Floor (T0)** — The classic "high ground, high reward" zone. Weapon mods, armor, and rare attachments spawn here consistently.
+2. **Launch Area Fuel Depot (T0–T1)** — A large open zone with cover and heavy loot. Dangerous because of sightlines — bring a long-range loadout.
+3. **Centrifuge Room Underground (T0)** — The highest-value single room in Aerospace. Getting there requires navigating lower levels, which means you're committed once you go in.
+
+### Prison Zone & Pump Room
+
+The Prison Zone is an often-overlooked area with **~22 individual loot points**. It's less contested than the core zones and great for teams running a "loot everything" strategy. The adjacent **Pump Room** is a compact but rich area — clear it quickly and rotate.
+
+### CEO Office Speedrun
+
+The CEO Office is the speedrun target of Aerospace Base. A coordinated squad can spawn, clear a path, loot the office, and extract in under 10 minutes. The loot quality justifies the investment — but **only attempt this once you know the map cold**.
+
+<Callout type="success" title="Pro Strategy">
+Split a 3-person squad: two players push the Centrifuge Room while one holds the Control Building stairwell as overwatch. If the Centrifuge team gets pinned, the overwatch player can cover their extraction.
+</Callout>
+
+<AdSlot position="in-article" />
+
+## Gold Spawn Locations
+
+"Gold spawns" are the ultra-rare loot drops that appear in fixed locations with a low spawn chance but enormous value when they do appear. Here are the known gold spawn locations on both maps:
+
+<ComparisonTable
+  headers={["Map", "Location", "Approximate Value", "Notes"]}
+  rows={[
+    ["Bakhsh", "Three Red Phantoms — Top Floor", "5M–15M", "Highest contest level"],
+    ["Bakhsh", "Museum Main Hall — Rare Spawn", "2M–6M", "Lower contest, good ROI"],
+    ["Aerospace", "Centrifuge Room", "4M–12M", "Requires underground access"],
+    ["Aerospace", "CEO Office", "3M–8M", "Speedrun target"],
+    ["Aerospace", "Control Building Top Floor", "3M–10M", "Consistent mid-tier backup"],
+  ]}
+/>
+
+## Extraction Route Summary
+
+- **Bakhsh:** The tower pull-switch is the fastest extraction from Babel Tower but commits you to a 4-minute defense. Plan a fallback exit if you're solo.
+- **Aerospace Base:** Use the north extract for Control Building runs, east extract for Fuel Depot, and south extract for Centrifuge Room.
+- On both maps, **always leave 8+ minutes** on the timer before heading to extraction.
+
+<AdSlot position="in-article" />
+
+## Which Map Should You Run?
+
+If you're still building your economy, **Bakhsh's Museum** is the safer pick — consistent loot, less player density. If you're geared up and confident in your gunskill, **Aerospace Base** offers the highest ceiling in the game. The best teams rotate between both maps depending on their loadout budget and squad size.
+
+<Callout type="info" title="Keep Learning">
+Mastered both maps? Check out our [Economy & Money-Making Guide](/articles/economy-guide.html) to turn your loot into long-term wealth, or the [Longbow Valley Guide](/articles/longbow-valley-map.html) to help newer squadmates catch up.
+</Callout>
+
+<AdSlot position="bottom" />

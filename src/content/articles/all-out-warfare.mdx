@@ -1,0 +1,281 @@
+---
+title: "All-Out Warfare Guide — 32v32 Battle Mode, Vehicles & Class Strategies"
+description: "Dominate All-Out Warfare in Delta Force: Hawk Ops. Master 32v32 large-scale battles, vehicle combat with tanks, helicopters & boats, and class strategies for Assault, Recon, Support & Engineering."
+pubDate: 2026-07-19
+updatedDate: 2026-07-24
+category: mode
+heroImage: "cover-allout.jpg"
+readTime: 14
+tags: ["all-out-warfare", "pvp", "game-mode"]
+featured: false
+---
+
+import Callout from '../../components/Callout.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import AdSlot from '../../components/AdSlot.astro';
+
+**All-Out Warfare** is where Delta Force: Hawk Ops transforms from a tactical extraction shooter into an epic battlefield simulator. This 32v32 large-scale combat mode pits two massive teams against each in combined arms warfare featuring infantry, tanks, helicopters, boats, and objective-based gameplay that rewards coordination, strategy, and raw firepower.
+
+If you've ever dreamed of commanding a tank column while helicopter gunships provide air cover, or coordinating a naval assault with infantry flanking maneuvers, All-Out Warfare delivers that experience. But mastering this mode requires more than just shooting skills — it demands an understanding of class roles, vehicle tactics, objective control, and team coordination at scale.
+
+<AdSlot position="in-article" />
+
+## How All-Out Warfare Works: The Basics
+
+All-Out Warfare is Delta Force's answer to classic large-scale multiplayer shooters like Battlefield. Two teams of 32 players each fight across expansive maps in objective-based game modes that emphasize teamwork and strategic thinking over individual kill counts.
+
+### Game Modes Within All-Out Warfare
+
+While the core experience is 32v32 combat, All-Out Warfare features several sub-modes that change the objectives and victory conditions:
+
+- **Conquest:** The classic large-scale mode. Capture and hold strategic points across the map to drain the enemy team's tickets. Control the majority of objectives to bleed the opposition dry.
+- **Breakthrough:** One team attacks while the other defends a series of objectives. Attackers push forward, defenders fall back. It's a tense, methodical mode that rewards coordination.
+- **Domination:** A faster-paced mode with fewer objectives but more frequent fighting. Perfect for players who want constant action without the downtime of larger modes.
+
+### The Class System: Your Role on the Battlefield
+
+Success in All-Out Warfare depends on choosing the right class for your playstyle and your team's needs. Delta Force features four distinct classes, each with unique abilities, equipment, and battlefield roles.
+
+<ComparisonTable
+  headers={["Class", "Primary Role", "Key Abilities", "Best For"]}
+  rows={[
+    ["Assault", "Frontline combat", "Explosives, extra health, aggressive tools", "Aggressive players who like being in the fight"],
+    ["Recon", "Intelligence & long-range", "Spotting, sniping, recon tools", "Patient players who prefer tactical positioning"],
+    ["Support", "Healing & supply", "Medical kits, ammo resupply, buffs", "Team players who enable squad success"],
+    ["Engineering", "Vehicle warfare", "Anti-vehicle weapons, repairs, explosives", "Players who enjoy vehicle combat and anti-tank warfare"],
+  ]}
+/>
+
+<Callout type="info" title="Beginner Tip: Start with Assault">
+If you're new to All-Out Warfare, start with the Assault class. It's the most straightforward role — get to the objective, shoot enemies, and stay alive. Once you understand the flow of battle, branch out to other classes to fill team needs.
+</Callout>
+
+{/* Inline SVG: Battlefield Layout with Vehicle Positions */}
+<figure class="article-image">
+  <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#0a0e17;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#1a2235;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+
+    
+    <rect width="800" height="400" fill="url(#bgGrad)"/>
+
+    
+    <text x="400" y="30" fill="#3b82f6" font-size="22" font-weight="bold" text-anchor="middle">ALL-OUT WARFARE — BATTLEFIELD LAYOUT</text>
+    <text x="400" y="50" fill="#9ca3af" font-size="12" text-anchor="middle">32v32 Combined Arms Combat</text>
+
+    
+    <rect x="50" y="70" width="700" height="280" fill="none" stroke="#2a3450" stroke-width="2" rx="8"/>
+
+    
+    <rect x="60" y="80" width="150" height="260" fill="rgba(59,130,246,0.1)" stroke="#3b82f6" stroke-width="1" rx="6"/>
+    <text x="135" y="105" fill="#3b82f6" font-size="16" font-weight="bold" text-anchor="middle">TEAM ALPHA</text>
+    <text x="135" y="120" fill="#9ca3af" font-size="10" text-anchor="middle">Attackers</text>
+
+    
+    <circle cx="90" cy="150" r="12" fill="#3b82f6" opacity="0.4"/>
+    <text x="90" y="155" fill="#fff" font-size="10" text-anchor="middle">👤</text>
+    <text x="115" y="155" fill="#e8eaf0" font-size="9">Infantry</text>
+
+    <circle cx="90" cy="185" r="12" fill="#3b82f6" opacity="0.4"/>
+    <text x="90" y="190" fill="#fff" font-size="10" text-anchor="middle">🚁</text>
+    <text x="115" y="190" fill="#e8eaf0" font-size="9">Helicopter</text>
+
+    <circle cx="90" cy="220" r="12" fill="#3b82f6" opacity="0.4"/>
+    <text x="90" y="225" fill="#fff" font-size="10" text-anchor="middle">🚗</text>
+    <text x="115" y="225" fill="#e8eaf0" font-size="9">Tank</text>
+
+    <circle cx="90" cy="255" r="12" fill="#3b82f6" opacity="0.4"/>
+    <text x="90" y="260" fill="#fff" font-size="10" text-anchor="middle">⚓</text>
+    <text x="115" y="260" fill="#e8eaf0" font-size="9">Boat</text>
+
+    
+    <rect x="590" y="80" width="150" height="260" fill="rgba(239,68,68,0.1)" stroke="#ef4444" stroke-width="1" rx="6"/>
+    <text x="665" y="105" fill="#ef4444" font-size="16" font-weight="bold" text-anchor="middle">TEAM BRAVO</text>
+    <text x="665" y="120" fill="#9ca3af" font-size="10" text-anchor="middle">Defenders</text>
+
+    
+    <circle cx="710" cy="150" r="12" fill="#ef4444" opacity="0.4"/>
+    <text x="710" y="155" fill="#fff" font-size="10" text-anchor="middle">👤</text>
+    <text x="685" y="155" fill="#e8eaf0" font-size="9">Infantry</text>
+
+    <circle cx="710" cy="185" r="12" fill="#ef4444" opacity="0.4"/>
+    <text x="710" y="190" fill="#fff" font-size="10" text-anchor="middle">🚁</text>
+    <text x="685" y="190" fill="#e8eaf0" font-size="9">Helicopter</text>
+
+    <circle cx="710" cy="220" r="12" fill="#ef4444" opacity="0.4"/>
+    <text x="710" y="225" fill="#fff" font-size="10" text-anchor="middle">🚗</text>
+    <text x="685" y="225" fill="#e8eaf0" font-size="9">Tank</text>
+
+    <circle cx="710" cy="255" r="12" fill="#ef4444" opacity="0.4"/>
+    <text x="710" y="260" fill="#fff" font-size="10" text-anchor="middle">🏗️</text>
+    <text x="685" y="260" fill="#e8eaf0" font-size="9">Defenses</text>
+
+    
+    <text x="400" y="200" fill="#f59e0b" font-size="18" font-weight="bold" text-anchor="middle">⚔️ BATTLEFIELD ⚔️</text>
+
+    
+    <circle cx="280" cy="150" r="18" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="2"/>
+    <text x="280" y="156" fill="#f59e0b" font-size="14" font-weight="bold" text-anchor="middle">A</text>
+
+    <circle cx="400" cy="210" r="18" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="2"/>
+    <text x="400" y="216" fill="#f59e0b" font-size="14" font-weight="bold" text-anchor="middle">B</text>
+
+    <circle cx="520" cy="150" r="18" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="2"/>
+    <text x="520" y="156" fill="#f59e0b" font-size="14" font-weight="bold" text-anchor="middle">C</text>
+
+    
+    <path d="M 210 150 L 260 150" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+    <path d="M 210 210 L 380 210" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+    <defs>
+      <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+      </marker>
+    </defs>
+
+    
+    <text x="400" y="370" fill="#9ca3af" font-size="10" text-anchor="middle">Objective Control: Capture A, B, C to drain enemy tickets • Vehicle Superiority: Control the skies and roads</text>
+  </svg>
+  <figcaption>All-Out Warfare combines infantry, vehicles, and objective control in 32v32 battles</figcaption>
+</figure>
+
+## Vehicle Warfare: Tanks, Helicopters & Boats
+
+Vehicles are what make All-Out Warfare truly special. They add a layer of combined arms tactics that elevates the mode beyond simple infantry combat. Mastering vehicle warfare is essential for dominating the battlefield.
+
+### Tanks: Mobile Fortresses
+
+Tanks are the kings of the battlefield in All-Out Warfare. They combine heavy armor, powerful main cannons, and machine guns into a single devastating platform. But tanks aren't invincible — they require infantry support to deal with anti-vehicle threats and to capture objectives they can't reach.
+
+**Tank Tactics:**
+
+- **Always move:** A stationary tank is a dead tank. Keep moving between shots to make yourself a harder target.
+- **Angle your armor:** Present your strongest armor (front) to threats and avoid exposing your weaker sides and rear.
+- **Work with infantry:** Tanks are vulnerable to infantry with anti-vehicle weapons. Always have friendly infantry nearby to deal with threats.
+- **Target priority:** Focus on enemy vehicles first, then infantry clusters, then objectives.
+- **Use terrain:** Hull-down positions (where only your turret is exposed) dramatically increase your survivability.
+
+### Helicopters: Air Superiority
+
+Helicopters provide unmatched mobility and firepower, able to strike from unexpected angles and reposition quickly. They're devastating against infantry and light vehicles but vulnerable to anti-air fire and enemy helicopters.
+
+**Helicopter Tactics:**
+
+- **Stay high:** Altitude gives you better situational awareness and makes you harder to hit with small arms fire.
+- **Use cover:** Don't hover in the open. Use buildings, trees, and terrain to break line of sight when reloading or taking damage.
+- **Target priority:** Focus on enemy vehicles first, then anti-air positions, then infantry clusters.
+- **Avoid dogfights:** If an enemy helicopter is engaging you, disengage unless you have a clear advantage. Prolonged air battles often end badly for both pilots.
+- **Support ground forces:** Your greatest value is supporting infantry and armor. Coordinate with ground teams for maximum impact.
+
+<AdSlot position="in-article" />
+
+### Boats: Naval Assault
+
+On maps with water features, boats provide fast transport and flanking opportunities. They're lightly armed and armored but can bypass enemy defenses by water, allowing for surprise attacks from unexpected directions.
+
+**Boat Tactics:**
+
+- **Use speed:** Boats are fast — use that speed to flank and reposition quickly.
+- **Don't stop:** Like tanks, a stationary boat is an easy target. Keep moving and use hit-and-run tactics.
+- **Flank objectives:** Boats can often bypass enemy defenses by approaching objectives from water routes.
+- **Watch for anti-boat weapons:** Engineering class players will target you with anti-vehicle weapons. Avoid predictable paths.
+
+## Class-Specific Strategies
+
+Each class plays a vital role in All-Out Warfare. Understanding your class's strengths and how to use them effectively is key to team success.
+
+### Assault: The Frontline
+
+Assault class players are the backbone of any team. You're expected to be at the front, pushing objectives, and engaging enemies head-on. Your explosives and extra health make you effective in direct combat.
+
+**Assault Tips:**
+
+- Push objectives aggressively but don't overextend without support.
+- Use explosives to flush enemies from cover and destroy enemy equipment.
+- Stick with your squad — lone wolves die quickly in All-Out Warfare.
+- Communicate enemy positions to your team constantly.
+
+### Recon: The Eyes of the Team
+
+Recon class players provide intelligence and long-range fire support. Your spotting abilities reveal enemy positions to your entire team, and your precision weapons can eliminate key targets from safety.
+
+**Recon Tips:**
+
+- Always spot enemies before engaging. Information is as valuable as kills.
+- Position yourself with good sightlines but also escape routes.
+- Call out enemy vehicle positions so Engineering class players can deal with them.
+- Don't get drawn into close-quarters combat — you're at a disadvantage there.
+
+### Support: The Team Enabler
+
+Support class players keep the team fighting through healing, ammo resupply, and buffs. You're not going to get the most kills, but your contribution is essential for sustained combat effectiveness.
+
+**Support Tips:**
+
+- Stay near your squad — your value comes from keeping them alive and supplied.
+- Prioritize healing wounded teammates over getting kills.
+- Drop ammo for teammates who are running low, especially during prolonged engagements.
+- Use buffs strategically — timing them for pushes or defenses can turn the tide.
+
+### Engineering: Vehicle Warfare Specialist
+
+Engineering class players are the anti-vehicle specialists. Your rockets and repair tools make you essential for dealing with enemy armor and keeping friendly vehicles operational.
+
+**Engineering Tips:**
+
+- Always target enemy vehicles — you're the team's primary anti-armor solution.
+- Repair friendly vehicles when possible — a repaired tank is more valuable than a destroyed enemy one.
+- Place explosives to block enemy vehicle routes and create kill zones.
+- Stay mobile — enemy vehicles will target you once they realize you're a threat.
+
+<AdSlot position="in-article" />
+
+## Objective-Based Tactics: Winning the Game
+
+All-Out Warfare isn't won by kills — it's won by controlling objectives. A team with fewer kills but better objective control will consistently win against a team that prioritizes kills over objectives.
+
+### Conquest: Control the Map
+
+In Conquest mode, victory comes from controlling the majority of capture points. Here's how to dominate:
+
+- **Don't cluster:** Spread your team across multiple objectives. Controlling three points is better than having 20 players on one point.
+- **Defend lightly:** Leave one or two players to defend captured points while the rest push for more.
+- **Attack together:** When pushing an objective, coordinate with your team to attack simultaneously from multiple angles.
+- **Use vehicles for mobility:** Vehicles can quickly reposition to contest objectives or reinforce weak points.
+
+### Breakthrough: Attack and Defend
+
+Breakthrough mode is more linear and methodical. One team attacks while the other defends a series of objectives.
+
+- **Attackers:** Push together, use vehicles to break through defensive lines, and coordinate attacks from multiple angles.
+- **Defenders:** Set up layered defenses, use engineering to create kill zones, and fall back methodically when overwhelmed.
+- **Both sides:** Communication is crucial. Call out enemy positions, coordinate vehicle support, and adapt to changing situations.
+
+## Beginner Strategies: Getting Started
+
+If you're new to All-Out Warfare, the scale and chaos can be overwhelming. Here's a roadmap to help you get started:
+
+1. **Start with Assault:** It's the most straightforward class. Focus on learning map layouts and objective locations.
+2. **Stick with your team:** Don't wander off alone. Stick with a squad and follow their lead.
+3. **Focus on objectives:** Kills are nice, but objectives win games. Prioritize capturing and defending over chasing kills.
+4. **Learn one vehicle at a time:** Start with tanks, then move to helicopters, then boats. Each has unique mechanics to master.
+5. **Communicate:** Use voice chat or pings to call out enemy positions and coordinate with your team.
+6. **Watch experienced players:** If you die, watch the killcam or spectate good players to learn positioning and tactics.
+
+<Callout type="success" title="The Golden Rule of All-Out Warfare">
+The best players aren't always the ones with the most kills — they're the ones who contribute to objective control. Focus on capturing points, defending key areas, and supporting your team. The kills will come naturally as a result of good positioning and teamwork.
+</Callout>
+
+## Conclusion
+
+All-Out Warfare is Delta Force: Hawk Ops at its most epic. The combination of 64 players, diverse vehicles, and objective-based gameplay creates unforgettable battlefield moments. Whether you're commanding a tank column, providing air support from a helicopter, or pushing objectives with your infantry squad, every match is a new tactical challenge.
+
+Success in All-Out Warfare comes from understanding your role, coordinating with your team, and prioritizing objectives over kills. Master your class, learn vehicle tactics, and always think strategically. The team that controls the battlefield controls the outcome.
+
+Now that you understand the fundamentals, it's time to drop into your first 32v32 battle. Choose your class, pick your vehicle, and show the battlefield what you're made of. For more strategies, check out our [complete Delta Force guide](/articles/delta-force-complete-guide.html) and our deep dive into [Havoc Operations](/articles/havoc-extraction-guide.html) for when you want a different kind of challenge.
+
+<AdSlot position="bottom" />

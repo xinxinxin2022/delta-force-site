@@ -1,0 +1,180 @@
+---
+title: "Hive Medic Operator Guide — Healing Smoke & Support Tactics in Delta Force"
+description: "Complete Hive Medic operator guide for Delta Force: Hawk Ops. Master the 1.4s Efficient Rescue passive, Hormone Gun damage trick, Hive Tech Smoke healing combos, and Grand ultimate timing for Havoc and All-Out Warfare."
+pubDate: 2026-07-18
+updatedDate: 2026-07-24
+category: "operator"
+heroImage: "cover-hivemedic.jpg"
+readTime: 10
+tags: ["hive-medic", "operator", "medic"]
+featured: false
+---
+
+import Callout from '../../components/Callout.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import AdSlot from '../../components/AdSlot.astro';
+
+Hive Medic is the operator that keeps squads alive in *Delta Force: Hawk Ops* — and when played well, she is much more than a walking medkit. Her toolkit rewards positioning, timing, and a surprisingly aggressive trick with her Hormone Gun that most new players miss entirely. If you want to climb in either Havoc or All-Out Warfare, learning Hive Medic is one of the highest-ROI investments you can make.
+
+This guide covers her full kit, the **healing smoke combo** that defines her playstyle, the Hormone Gun damage trick, and how to position her Grand ultimate so it actually wins fights.
+
+<AdSlot position="in-article" />
+
+{/* Inline SVG: Hive Medic Operator Card */}
+<figure class="article-image">
+<svg class="article-hero-svg" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hive Medic operator card with healing cross and smoke illustration">
+  <defs>
+    <linearGradient id="hmBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0e17"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="hmHeal" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="hmGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="400" fill="url(#hmBg)"/>
+  
+  <g stroke="#1a2235" stroke-width="1" opacity="0.5">
+    <path d="M0 80 L800 80 M0 160 L800 160 M0 240 L800 240 M0 320 L800 320"/>
+    <path d="M160 0 L160 400 M320 0 L320 400 M480 0 L480 400 M640 0 L640 400"/>
+  </g>
+  
+  <circle cx="400" cy="200" r="180" fill="url(#hmHeal)"/>
+  
+  <g transform="translate(400 200)" filter="url(#hmGlow)">
+    <rect x="-20" y="-70" width="40" height="140" rx="6" fill="#10b981"/>
+    <rect x="-70" y="-20" width="140" height="40" rx="6" fill="#10b981"/>
+    <rect x="-14" y="-64" width="28" height="128" rx="3" fill="#0a0e17" opacity="0.4"/>
+    <rect x="-64" y="-14" width="128" height="28" rx="3" fill="#0a0e17" opacity="0.4"/>
+  </g>
+  
+  <g fill="#3b82f6" opacity="0.4">
+    <circle cx="280" cy="280" r="18"/>
+    <circle cx="310" cy="300" r="14"/>
+    <circle cx="340" cy="285" r="20"/>
+    <circle cx="470" cy="290" r="16"/>
+    <circle cx="500" cy="275" r="22"/>
+    <circle cx="530" cy="300" r="14"/>
+  </g>
+  
+  <g transform="translate(40 50)">
+    <rect width="220" height="90" rx="8" fill="#1a2235" stroke="#10b981" stroke-width="2"/>
+    <text x="20" y="35" fill="#10b981" font-family="Rajdhani, sans-serif" font-size="22" font-weight="700">HIVE MEDIC</text>
+    <text x="20" y="58" fill="#9ca3af" font-family="Inter, sans-serif" font-size="12">SUPPORT OPERATOR · HEALER</text>
+    <text x="20" y="78" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="11">▸ TIER T1</text>
+  </g>
+  
+  <g transform="translate(540 50)">
+    <rect width="220" height="90" rx="8" fill="#1a2235" stroke="#3b82f6" stroke-width="2"/>
+    <text x="20" y="30" fill="#9ca3af" font-family="Inter, sans-serif" font-size="11">PASSIVE</text>
+    <text x="100" y="30" fill="#e8eaf0" font-family="Inter, sans-serif" font-size="11">Efficient Rescue · 1.4 s</text>
+    <text x="20" y="55" fill="#9ca3af" font-family="Inter, sans-serif" font-size="11">HORMONE GUN</text>
+    <text x="120" y="55" fill="#f59e0b" font-family="Inter, sans-serif" font-size="11" font-weight="700">6 rounds</text>
+    <text x="20" y="78" fill="#9ca3af" font-family="Inter, sans-serif" font-size="11">SMOKE</text>
+    <text x="100" y="78" fill="#10b981" font-family="Inter, sans-serif" font-size="11">Shoot → Green = Heal</text>
+  </g>
+</svg>
+<figcaption>Hive Medic operator card showcasing healing cross, smoke illustration, abilities, and stats</figcaption>
+</figure>
+
+## Passive — Efficient Rescue (1.4s Revive)
+
+Hive Medic's passive shortens her revive animation to **1.4 seconds** — roughly half the time of other operators. In a game where a revive often happens under pressure, this is the difference between bringing a teammate back and getting killed mid-resurrect. It also affects her own self-revive timing, giving her a second chance after being downed.
+
+### Why this matters
+
+- Faster revives mean you spend less time crouched and vulnerable.
+- Enemies cannot "trade" the reviver as easily — your window of exposure is brutal to punish.
+- In Havoc, a 1.4s revive during a contested extraction can save an entire loadout.
+
+<Callout type="info" title="Support Note">
+As Hive Medic, you are the primary reviver. Let your damage dealers push — your job is to clean up, reposition, and get people back in the fight within seconds.
+</Callout>
+
+## Abilities — Hormone Gun, Hive Tech Smoke & Smoke Drone
+
+### Hormone Gun (6 Rounds)
+
+The Hormone Gun is Hive Medic's weird and wonderful side-tool. It fires 6 rounds that, on **allies**, grant a small movement-speed and reload-speed buff. On **enemies**, those same rounds deal damage. Yes — your healing gun is also a gun.
+
+| Property | Value |
+|---|---|
+| Magazine | 6 rounds |
+| Ally effect | Buff: movement + reload speed |
+| Enemy effect | Damage (not trivial at close range) |
+| Best range | Short to mid — it is not a rifle |
+
+<Callout type="warning" title="Hormone Gun Trick">
+If an enemy pushes you while you are mid-heal, do not panic-swap to your primary. The Hormone Gun can finish them off at close range — and it is faster to pull the trigger than to ADS with your main. Veteran Hive Medics routinely clutch 1v1s this way.
+</Callout>
+
+### Hive Tech Smoke — The Core Combo
+
+This is the ability that defines Hive Medic. Hive Tech Smoke launches a canister that drops smoke. Here is the key mechanic: **if you shoot the smoke canister, the smoke turns green and becomes a healing cloud** instead of just vision-blocking. Allies standing inside the green smoke regenerate health over time.
+
+### The combo, step by step
+
+1. Launch Hive Tech Smoke into the area where your team is fighting or needs cover.
+2. Immediately shoot the canister with any weapon.
+3. The smoke turns green and starts healing any allies inside it.
+4. Enemies in the same smoke still cannot see — but they are not healed.
+
+This combo is one of the strongest defensive tools in the game. It lets you hold angles through superior vision denial *and* sustain your team through prolonged fights.
+
+### Smoke Drone
+
+The Smoke Drone is a deployable aerial unit that drops smoke in a target area. It extends your reach — you can deny a push or cover a retreat from well outside the immediate fight. Treat it as a "save for the important moment" tool rather than something to spam.
+
+### Grand — Area Denial Healing Field
+
+Hive Medic's ultimate drops a large healing field. Allies inside regenerate quickly and gain damage resistance. Use it to:
+
+- Hold a defensive position through a sustained push.
+- Post-plant the area after your team takes a contested zone.
+- Cover an extraction in Havoc while your squad regroups.
+
+<AdSlot position="in-article" />
+
+## Core Combos
+
+<ComparisonTable
+  headers={["Combo", "Setup", "Result"]}
+  rows={[
+    ["Smoke → Shoot → Hold", "Launch smoke at chokepoint, shoot it green, hold angle behind it", "Enemies cannot push; your team heals through the fight"],
+    ["Buff → Push", "Hormone Gun teammates, then initiate engage", "Faster movement and reloads win the first exchange"],
+    ["Grand + Smoke Stack", "Pop Grand, layer two more smoke heals on top", "Near-immortal defensive zone for ~15 seconds"],
+    ["Hormone Gun Finisher", "Enemy pushes close during heal → Hormone Gun 2–3 shots", "Clutch kill without swapping weapons"],
+  ]}
+/>
+
+## Playstyle — Stay Behind, Stay Alive
+
+Hive Medic is not a frontline operator. Her value comes from **being alive long enough to use her kit**, which means positioning behind your damage dealers, pre-shooting smoke canisters at likely engagement areas, and using the Hormone Gun only when you are not exposed.
+
+### Positioning rules
+
+- **Stay one room behind the push.** You should hear the fight, not be in it.
+- **Pre-place healing.** If you expect a push through a door, put smoke there before the enemy arrives.
+- **Track your Hormone Gun ammo.** Six rounds is not a lot — do not waste them on already-full-health teammates.
+- **Save the drone for emergencies.** Once you use it casually, you will wish you had it for the actual crisis.
+
+## Tier Placement — Solid T1
+
+Hive Medic is a consistent **T1** pick in both modes. She is not meta-breaking the way a top weapon might be, but she is always relevant, always useful, and always welcome in a coordinated squad. In solo-queue she drops slightly — because random teammates do not always stand in your healing smoke — but she still outperforms most operators in the hands of a thoughtful player.
+
+<Callout type="success" title="Bottom Line">
+Hive Medic is the operator you want in your squad when the match gets long, the fights get tough, and someone needs to keep the team in the game. Master the smoke combo, respect the Hormone Gun's damage trick, and you will win more matches than you lose.
+</Callout>
+
+<AdSlot position="in-article" />
+
+<Callout type="info" title="What's Next?">
+Build your squad around Hive Medic's healing. Check out our [Silver Wing guide](/articles/silver-wing-operator.html) for the perfect recon partner, the [Weapon Tier List](/articles/weapon-tier-list.html) for current meta picks, and the [Budget Weapon Builds](/articles/budget-weapon-builds.html) for cost-effective loadouts.
+</Callout>
+
+<AdSlot position="bottom" />
