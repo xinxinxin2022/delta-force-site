@@ -34,15 +34,17 @@ const categoryClasses: Record<string, string> = {
 const heroUrl = `${IMAGE_BASE_URL}${data.heroImage}`;
 const articleUrl = `/articles/${slug}/`;
 ---
-<article class="article-card" data-category={categoryClasses[data.category] || `cat-${data.category}`}>
-  <img class="card-image-real" src={heroUrl} alt={data.title} loading="lazy">
-  <div class="card-body">
-    <span class="card-category {categoryClasses[data.category] || ''}">{categoryLabels[data.category] || data.category}</span>
-    <h3 class="card-title"><a href={articleUrl}>{data.title}</a></h3>
-    <p class="card-excerpt">{data.description}</p>
-    <div class="card-meta">
-      <time datetime={data.pubDate.toISOString()}>{data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</time>
-      <span class="read-time">📖 {data.readTime} min read</span>
+<a href={articleUrl} class="article-card-link" data-category={categoryClasses[data.category] || `cat-${data.category}`}>
+  <article class="article-card">
+    <img class="card-image-real" src={heroUrl} alt={data.title} loading="lazy">
+    <div class="card-body">
+      <span class="card-category {categoryClasses[data.category] || ''}">{categoryLabels[data.category] || data.category}</span>
+      <h3 class="card-title">{data.title}</h3>
+      <p class="card-excerpt">{data.description}</p>
+      <div class="card-meta">
+        <time datetime={data.pubDate.toISOString()}>{data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</time>
+        <span class="read-time">📖 {data.readTime} min read</span>
+      </div>
     </div>
-  </div>
-</article>
+  </article>
+</a>

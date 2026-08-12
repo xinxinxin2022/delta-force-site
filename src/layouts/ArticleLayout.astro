@@ -73,6 +73,10 @@ const jsonLd = [
   currentPage={data.category}
 >
   <main class="article-page">
+    <div class="article-hero-banner">
+      <img src={heroImageUrl} alt={data.title} loading="lazy">
+    </div>
+
     <div class="container">
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="/">Home</a>
@@ -82,17 +86,13 @@ const jsonLd = [
         <span>{data.title}</span>
       </nav>
 
-      <div class="article-hero-banner">
-        <img src={heroImageUrl} alt={data.title} loading="lazy">
-      </div>
-
-      <header>
+      <header class="article-header">
         <h1 class="article-title">{data.title}</h1>
         <div class="article-meta">
           <span class="article-meta-item">✍️ {data.author}</span>
           <span class="article-meta-item">📅 Updated {data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-          <span class="article-meta-item">⏱️ {data.readTime} min read</span>
-          <span class="article-meta-item">📁 {categoryNames[data.category] || data.category}</span>
+          <span class="article-meta-item">️ {data.readTime} min read</span>
+          <span class="article-meta-item"> {categoryNames[data.category] || data.category}</span>
         </div>
       </header>
 
