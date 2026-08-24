@@ -219,6 +219,107 @@ Pulling either lever activates the **Dam Elevator extraction point**, and it can
 
 <AdSlot position="in-article" />
 
+{/* SVG: Extraction Strategy Decision Tree */}
+<figure class="article-image">
+<svg viewBox="0 0 800 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Extraction strategy decision tree for Dam Zero">
+  <defs>
+    <linearGradient id="extractBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0e17"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="340" fill="url(#extractBg)" rx="10"/>
+
+  <text x="400" y="28" fill="#f59e0b" font-family="Rajdhani, sans-serif" font-size="16" font-weight="700" text-anchor="middle">EXTRACTION STRATEGY — WHICH EXIT TO TAKE?</text>
+
+  {/* Root question */}
+  <rect x="300" y="45" width="200" height="36" rx="8" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="400" y="60" fill="#fcd34d" font-family="Inter, sans-serif" font-size="10" font-weight="600" text-anchor="middle">What's your situation?</text>
+  <text x="400" y="74" fill="#94a3b8" font-family="Inter, sans-serif" font-size="8" text-anchor="middle">Choose your scenario →</text>
+
+  {/* Branch 1: Knife Run */}
+  <line x1="350" y1="81" x2="130" y2="105" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="30" y="100" width="100" height="26" rx="5" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="1"/>
+  <text x="80" y="117" fill="#10b981" font-family="Inter, sans-serif" font-size="9" font-weight="700" text-anchor="middle">Knife Run</text>
+
+  <text x="80" y="142" fill="#94a3b8" font-family="Inter, sans-serif" font-size="8" text-anchor="middle">→ Fixed extract</text>
+  <text x="80" y="154" fill="#94a3b8" font-family="Inter, sans-serif" font-size="8" text-anchor="middle">opposite of spawn</text>
+  <text x="80" y="172" fill="#10b981" font-family="Inter, sans-serif" font-size="9" font-weight="600" text-anchor="middle">★ Best: Extract A or B</text>
+  <text x="80" y="188" fill="#64748b" font-family="Inter, sans-serif" font-size="7" text-anchor="middle">Shortest path, least risk</text>
+
+  {/* Branch 2: Full Loadout */}
+  <line x1="400" y1="81" x2="400" y2="105" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="350" y="100" width="100" height="26" rx="5" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="1"/>
+  <text x="400" y="117" fill="#3b82f6" font-family="Inter, sans-serif" font-size="9" font-weight="700" text-anchor="middle">Full Loadout</text>
+
+  <text x="400" y="142" fill="#94a3b8" font-family="Inter, sans-serif" font-size="8" text-anchor="middle">→ Dam Elevator</text>
+  <text x="400" y="154" fill="#94a3b8" font-family="Inter, sans-serif" font-size="8" text-anchor="middle">(pull lever first)</text>
+  <text x="400" y="172" fill="#3b82f6" font-family="Inter, sans-serif" font-size="9" font-weight="600" text-anchor="middle">★ Lever A or B</text>
+  <text x="400" y="188" fill="#64748b" font-family="Inter, sans-serif" font-size="7" text-anchor="middle">Control the elevator area</text>
+
+  {/* Branch 3: Desperate */}
+  <line x1="450" y1="81" x2="670" y2="105" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="620" y="100" width="100" height="26" rx="5" fill="rgba(239,68,68,0.15)" stroke="#ef4444" stroke-width="1"/>
+  <text x="670" y="117" fill="#ef4444" font-family="Inter, sans-serif" font-size="9" font-weight="700" text-anchor="middle">Low on Time</text>
+
+  <text x="670" y="142" fill="#94a3b8" font-family="Inter, sans-serif" font-size="8" text-anchor="middle">→ Random extract</text>
+  <text x="670" y="154" fill="#94a3b8" font-family="Inter, sans-serif" font-size="8" text-anchor="middle">(green smoke)</text>
+  <text x="670" y="172" fill="#ef4444" font-family="Inter, sans-serif" font-size="9" font-weight="600" text-anchor="middle">★ Check mini-map</text>
+  <text x="670" y="188" fill="#64748b" font-family="Inter, sans-serif" font-size="7" text-anchor="middle">Or paid extract as backup</text>
+
+  {/* Bottom extraction type legend */}
+  <g transform="translate(40 210)">
+    <text x="360" y="0" fill="#64748b" font-family="Inter, sans-serif" font-size="9" font-weight="600" text-anchor="middle">EXTRACTION TYPE COMPARISON</text>
+
+    <rect x="10" y="15" width="700" height="100" rx="6" fill="rgba(26,34,53,0.8)" stroke="#1e293b" stroke-width="1"/>
+
+    {/* Headers */}
+    <text x="30" y="35" fill="#64748b" font-family="Inter, sans-serif" font-size="8" font-weight="600">Type</text>
+    <text x="200" y="35" fill="#64748b" font-family="Inter, sans-serif" font-size="8" font-weight="600">Availability</text>
+    <text x="380" y="35" fill="#64748b" font-family="Inter, sans-serif" font-size="8" font-weight="600">Condition</text>
+    <text x="560" y="35" fill="#64748b" font-family="Inter, sans-serif" font-size="8" font-weight="600">Risk Level</text>
+
+    {/* Fixed */}
+    <circle cx="20" cy="55" r="4" fill="#10b981"/>
+    <text x="30" y="58" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="9">Fixed (A, B)</text>
+    <text x="200" y="58" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Always open</text>
+    <text x="380" y="58" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Opposite of spawn</text>
+    <text x="560" y="58" fill="#10b981" font-family="Inter, sans-serif" font-size="9">★ Low</text>
+
+    {/* Random */}
+    <circle cx="20" cy="77" r="4" fill="#3b82f6"/>
+    <text x="30" y="80" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="9">Random (green smoke)</text>
+    <text x="200" y="80" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Random chance</text>
+    <text x="380" y="80" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">10s wait in range</text>
+    <text x="560" y="80" fill="#3b82f6" font-family="Inter, sans-serif" font-size="9">★ Low-Med</text>
+
+    {/* Paid */}
+    <circle cx="20" cy="99" r="4" fill="#f59e0b"/>
+    <text x="30" y="102" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="9">Paid</text>
+    <text x="200" y="102" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Always open</text>
+    <text x="380" y="102" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Pay in-game currency</text>
+    <text x="560" y="102" fill="#f59e0b" font-family="Inter, sans-serif" font-size="9">★ Med (camped)</text>
+
+    {/* Lever */}
+    <circle cx="20" cy="121" r="4" fill="#a855f7"/>
+    <text x="30" y="124" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="9">Dam Elevator</text>
+    <text x="200" y="124" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">After lever pull</text>
+    <text x="380" y="124" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Pull lever at Admin or Sub</text>
+    <text x="560" y="124" fill="#a855f7" font-family="Inter, sans-serif" font-size="9">★ Med-High</text>
+
+    {/* Conditional */}
+    <circle cx="20" cy="143" r="4" fill="#ef4444"/>
+    <text x="30" y="146" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="9">Conditional</text>
+    <text x="200" y="146" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Always open</text>
+    <text x="380" y="146" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Drop bag OR weight limit</text>
+    <text x="560" y="146" fill="#ef4444" font-family="Inter, sans-serif" font-size="9">★ High (sacrifice)</text>
+  </g>
+</svg>
+<figcaption>Extraction strategy decision tree — match your situation to the right exit type for the safest extract.</figcaption>
+</figure>
+
+<AdSlot position="in-article" />
+
 ## The Knife Run — 8 to 12 Minutes, 300K to 500K
 
 The "knife run" is Dam Zero's signature strategy. The idea is simple: spawn in with minimal loadout (just a knife and a small bag), sprint a pre-planned route through the densest loot zones, grab everything of value, and extract before a fight ever starts. Done right, it is the fastest legal money in Havoc.
@@ -244,6 +345,129 @@ You have no weapon and minimal armor during a knife run. If another squad is run
 - **Run** early in the match when squads are still spreading out.
 - **Fight** only if you spawn with a full loadout and are playing for position.
 - **Never mix strategies mid-run** — decide at spawn whether you are running or fighting.
+
+{/* SVG: Detailed Knife Run Route Map */}
+<figure class="article-image">
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dam Zero optimal knife run route with waypoints and timing">
+  <defs>
+    <linearGradient id="routeBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0e17"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="routeLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <filter id="routeGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="400" fill="url(#routeBg)" rx="10"/>
+
+  <text x="400" y="28" fill="#f59e0b" font-family="Rajdhani, sans-serif" font-size="16" font-weight="700" text-anchor="middle">OPTIMAL KNIFE RUN ROUTE — 8-12 MINUTES</text>
+  <text x="400" y="44" fill="#64748b" font-family="Inter, sans-serif" font-size="9" text-anchor="middle">North spawn → South extract · 300K-500K profit · Zero gunfights</text>
+
+  {/* Map background elements */}
+  <rect x="280" y="60" width="240" height="80" rx="6" fill="#1a2235" stroke="#3b82f6" stroke-width="1" opacity="0.5"/>
+  <text x="400" y="105" fill="#3b82f6" font-family="Rajdhani, sans-serif" font-size="14" font-weight="700" text-anchor="middle" opacity="0.5">THE DAM</text>
+
+  <rect x="60" y="60" width="140" height="60" rx="6" fill="#1a2235" stroke="#475569" stroke-width="1" opacity="0.4"/>
+  <text x="130" y="95" fill="#64748b" font-family="Inter, sans-serif" font-size="9" text-anchor="middle" opacity="0.4">Admin Center</text>
+
+  <rect x="600" y="60" width="140" height="60" rx="6" fill="#1a2235" stroke="#475569" stroke-width="1" opacity="0.4"/>
+  <text x="670" y="95" fill="#64748b" font-family="Inter, sans-serif" font-size="9" text-anchor="middle" opacity="0.4">Power Sub</text>
+
+  <rect x="600" y="160" width="140" height="60" rx="6" fill="#1a2235" stroke="#475569" stroke-width="1" opacity="0.4"/>
+  <text x="670" y="195" fill="#64748b" font-family="Inter, sans-serif" font-size="9" text-anchor="middle" opacity="0.4">Underground</text>
+
+  {/* Route path */}
+  <path d="M 400 60 L 370 130 L 340 175 L 310 220 L 280 265 L 250 310 L 200 350" fill="none" stroke="url(#routeLine)" stroke-width="4" filter="url(#routeGlow)" stroke-linecap="round"/>
+
+  {/* Spawn point */}
+  <g transform="translate(400 55)">
+    <circle r="10" fill="#10b981" stroke="#0a0e17" stroke-width="2"/>
+    <text x="0" y="4" fill="#fff" font-family="Inter, sans-serif" font-size="10" font-weight="700" text-anchor="middle">S</text>
+    <text x="20" y="5" fill="#10b981" font-family="Inter, sans-serif" font-size="9" font-weight="600">NORTH SPAWN</text>
+  </g>
+
+  {/* Waypoint 1: Pump Room */}
+  <g transform="translate(370 130)">
+    <circle r="14" fill="#1a2235" stroke="#10b981" stroke-width="2"/>
+    <text x="0" y="5" fill="#10b981" font-family="Rajdhani, sans-serif" font-size="12" font-weight="700" text-anchor="middle">1</text>
+    <rect x="18" y="-12" width="130" height="28" rx="4" fill="#1a2235" stroke="#10b981" stroke-width="1"/>
+    <text x="28" y="2" fill="#10b981" font-family="Inter, sans-serif" font-size="9" font-weight="700">Pump Room</text>
+    <text x="28" y="14" fill="#94a3b8" font-family="Inter, sans-serif" font-size="8">~1 min · 22 loot points</text>
+  </g>
+
+  {/* Waypoint 2: Admin Building */}
+  <g transform="translate(340 175)">
+    <circle r="14" fill="#1a2235" stroke="#3b82f6" stroke-width="2"/>
+    <text x="0" y="5" fill="#3b82f6" font-family="Rajdhani, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2</text>
+    <rect x="-148" y="-12" width="140" height="28" rx="4" fill="#1a2235" stroke="#3b82f6" stroke-width="1"/>
+    <text x="-138" y="2" fill="#3b82f6" font-family="Inter, sans-serif" font-size="9" font-weight="700">Admin Building</text>
+    <text x="-138" y="14" fill="#94a3b8" font-family="Inter, sans-serif" font-size="8">~1 min · Keycards &amp; docs</text>
+  </g>
+
+  {/* Waypoint 3: Visitor Center */}
+  <g transform="translate(310 220)">
+    <circle r="14" fill="#1a2235" stroke="#f59e0b" stroke-width="2"/>
+    <text x="0" y="5" fill="#f59e0b" font-family="Rajdhani, sans-serif" font-size="12" font-weight="700" text-anchor="middle">3</text>
+    <rect x="18" y="-12" width="145" height="28" rx="4" fill="#1a2235" stroke="#f59e0b" stroke-width="1"/>
+    <text x="28" y="2" fill="#f59e0b" font-family="Inter, sans-serif" font-size="9" font-weight="700">Visitor Center 1-2F</text>
+    <text x="28" y="14" fill="#94a3b8" font-family="Inter, sans-serif" font-size="8">~2 min · Skip 3F without key</text>
+  </g>
+
+  {/* Waypoint 4: Power Substation */}
+  <g transform="translate(280 265)">
+    <circle r="14" fill="#1a2235" stroke="#a855f7" stroke-width="2"/>
+    <text x="0" y="5" fill="#a855f7" font-family="Rajdhani, sans-serif" font-size="12" font-weight="700" text-anchor="middle">4</text>
+    <rect x="-148" y="-12" width="140" height="28" rx="4" fill="#1a2235" stroke="#a855f7" stroke-width="1"/>
+    <text x="-138" y="2" fill="#a855f7" font-family="Inter, sans-serif" font-size="9" font-weight="700">Power Substation</text>
+    <text x="-138" y="14" fill="#94a3b8" font-family="Inter, sans-serif" font-size="8">~1 min · Electronics</text>
+  </g>
+
+  {/* Waypoint 5: Admin Center (payoff) */}
+  <g transform="translate(250 310)">
+    <circle r="16" fill="rgba(245,158,11,0.3)" stroke="#f59e0b" stroke-width="2"/>
+    <text x="0" y="6" fill="#fbbf24" font-family="Rajdhani, sans-serif" font-size="14" font-weight="700" text-anchor="middle">5</text>
+    <rect x="20" y="-14" width="160" height="32" rx="4" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="30" y="2" fill="#fbbf24" font-family="Inter, sans-serif" font-size="10" font-weight="700">Admin Center ★ PAYOFF</text>
+    <text x="30" y="16" fill="#94a3b8" font-family="Inter, sans-serif" font-size="8">~2 min · 32 high-tier loot points</text>
+  </g>
+
+  {/* Extract point */}
+  <g transform="translate(200 350)">
+    <circle r="12" fill="#ef4444" stroke="#0a0e17" stroke-width="2"/>
+    <text x="0" y="5" fill="#fff" font-family="Inter, sans-serif" font-size="10" font-weight="700" text-anchor="middle">E</text>
+    <text x="-70" y="5" fill="#ef4444" font-family="Inter, sans-serif" font-size="9" font-weight="600">EXTRACT B (SW)</text>
+  </g>
+
+  {/* Timing bar at bottom */}
+  <g transform="translate(60 375)">
+    <rect width="680" height="6" rx="3" fill="#1e293b"/>
+    <rect width="68" height="6" rx="3" fill="#10b981"/>
+    <rect x="68" width="68" height="6" rx="3" fill="#10b981"/>
+    <rect x="136" width="68" height="6" rx="3" fill="#3b82f6"/>
+    <rect x="204" width="136" height="6" rx="3" fill="#f59e0b"/>
+    <rect x="340" width="68" height="6" rx="3" fill="#a855f7"/>
+    <rect x="408" width="136" height="6" rx="3" fill="#ef4444"/>
+    <rect x="544" width="136" height="6" rx="3" fill="#1e293b"/>
+
+    <text x="0" y="-3" fill="#64748b" font-family="Inter, sans-serif" font-size="7">0:00</text>
+    <text x="136" y="-3" fill="#64748b" font-family="Inter, sans-serif" font-size="7">2:00</text>
+    <text x="340" y="-3" fill="#64748b" font-family="Inter, sans-serif" font-size="7">5:00</text>
+    <text x="544" y="-3" fill="#64748b" font-family="Inter, sans-serif" font-size="7">8:00</text>
+    <text x="670" y="-3" fill="#64748b" font-family="Inter, sans-serif" font-size="7">10:00</text>
+
+    <text x="340" y="18" fill="#64748b" font-family="Inter, sans-serif" font-size="8" text-anchor="middle">Total route time: 8-12 min · Profit: 300K-500K</text>
+  </g>
+</svg>
+<figcaption>The optimal knife run route — hit 5 waypoints in order, extract at the opposite-side fixed point, and you're out with 300K-500K in under 12 minutes.</figcaption>
+</figure>
+
+<AdSlot position="in-article" />
 
 ## Treasure Map Locations (1-11)
 
