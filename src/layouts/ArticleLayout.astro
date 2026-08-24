@@ -12,7 +12,7 @@ const { data, id } = entry;
 const slug = id.replace('.mdx', '');
 
 const articleUrl = `https://game-delta.asia/articles/${slug}/`;
-const heroImageUrl = `${IMAGE_BASE_URL}${data.heroImage}`;
+const heroImageUrl = data.heroImage.startsWith('http') ? data.heroImage : `${IMAGE_BASE_URL}${data.heroImage}`;
 
 const categoryNames: Record<string, string> = {
   overview: 'Overview',

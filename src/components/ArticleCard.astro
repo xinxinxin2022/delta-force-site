@@ -31,7 +31,7 @@ const categoryClasses: Record<string, string> = {
   season: 'cat-season',
 };
 
-const heroUrl = `${IMAGE_BASE_URL}${data.heroImage}`;
+const heroUrl = data.heroImage.startsWith('http') ? data.heroImage : `${IMAGE_BASE_URL}${data.heroImage}`;
 const articleUrl = `/articles/${slug}/`;
 ---
 <a href={articleUrl} class="article-card-link" data-category={categoryClasses[data.category] || `cat-${data.category}`}>
