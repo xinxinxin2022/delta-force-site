@@ -71,10 +71,11 @@ const jsonLd = [
   canonical={articleUrl}
   jsonLd={jsonLd}
   currentPage={data.category}
+  ogImage={heroImageUrl}
 >
   <main class="article-page">
     <div class="article-hero-banner">
-      <img src={heroImageUrl} alt={data.title} loading="lazy">
+      <img src={heroImageUrl} alt={data.title} fetchpriority="high">
     </div>
 
     <div class="article-wrapper">
