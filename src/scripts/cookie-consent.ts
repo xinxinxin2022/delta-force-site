@@ -1,6 +1,6 @@
 /**
  * Cookie Consent Banner — GDPR Compliance
- * Shows a consent banner on first visit. Ads are NOT loaded until user accepts.
+ * Shows a consent banner on first visit. Analytics are NOT loaded until user accepts.
  * Stores preference in localStorage.
  */
 (function() {
@@ -27,8 +27,8 @@
       '<div class="cc-inner">' +
         '<div class="cc-text">' +
           '<strong>We value your privacy</strong>' +
-          '<p>We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. ' +
-          '<a href="/privacy-policy.html#cookies" style="color:#f59e0b;text-decoration:underline;">Learn more</a></p>' +
+          '<p>We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. ' +
+          '<a href="/privacy-policy/" style="color:#f59e0b;text-decoration:underline;">Learn more</a></p>' +
         '</div>' +
         '<div class="cc-buttons">' +
           '<button class="cc-btn cc-btn-decline" id="ccDecline">Reject All</button>' +
@@ -88,15 +88,11 @@
     document.getElementById('ccAccept').addEventListener('click', function() {
       setConsent('accepted');
       hideBanner();
-      // Enable personalized ads (re-load ad script with tracking)
-      enableAds();
     });
 
     document.getElementById('ccDecline').addEventListener('click', function() {
       setConsent('declined');
       hideBanner();
-      // Non-personalized ads only
-      loadNonPersonalizedAds();
     });
   }
 
@@ -113,25 +109,6 @@
         banner = null;
       }, 300);
     }
-  }
-
-  function enableAds() {
-    // Ads are already loaded via the standard AdSense script in <head>
-    // With consent, personalized ads are enabled by default
-    if (typeof window.adsbygoogle !== 'undefined') {
-      // Google personalization is on by default — nothing extra needed
-      try {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      } catch(e) {}
-    }
-  }
-
-  function loadNonPersonalizedAds() {
-    // For users who decline, request non-personalized ads
-    // See: https://support.google.com/adsense/answer/9299606
-    try {
-      (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = true;
-    } catch(e) {}
   }
 
   // Initialize when DOM is ready

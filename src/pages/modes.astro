@@ -1,7 +1,6 @@
 ---
 import { IMAGE_BASE_URL } from '../lib/constants.ts';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import AdSlot from '../components/AdSlot.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import ComparisonTable from '../components/ComparisonTable.astro';
 import { getCollection } from 'astro:content';
@@ -71,7 +70,6 @@ const modeArticles = articles.filter(a => a.data.category === 'mode');
     <div class="container">
       <h2 class="section-title">Game Modes Guides</h2>
       <p class="section-lead">Deep-dive into each mode with dedicated strategy guides.</p>
-      <AdSlot position="in-article" />
       <div class="articles-grid articles-grid-2col">
         {modeArticles.map(entry => <ArticleCard entry={entry} />)}
       </div>

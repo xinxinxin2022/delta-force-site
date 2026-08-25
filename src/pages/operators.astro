@@ -1,7 +1,6 @@
 ---
 import { IMAGE_BASE_URL } from '../lib/constants.ts';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import AdSlot from '../components/AdSlot.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import ComparisonTable from '../components/ComparisonTable.astro';
 import { getCollection } from 'astro:content';
@@ -48,7 +47,6 @@ const operatorArticles = articles.filter(a => a.data.category === 'operator');
     <div class="container">
       <h2 class="section-title">Operator Guides</h2>
       <p class="section-lead">Complete guides for every operator in Delta Force: Hawk Ops.</p>
-      <AdSlot position="in-article" />
       <div class="articles-grid">
         {operatorArticles.map(entry => <ArticleCard entry={entry} />)}
       </div>

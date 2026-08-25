@@ -791,29 +791,6 @@ img {
   display: block;
 }
 
-/* --- Ad Slots --- */
-.ad-slot {
-  width: 100%;
-  min-height: 100px;
-  margin: var(--space-xl) 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: rgba(26, 34, 53, 0.5);
-  border: 1px dashed var(--border-color);
-  border-radius: var(--border-radius-sm);
-  padding: var(--space-md);
-}
-
-.ad-slot-label {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-muted);
-  margin-bottom: var(--space-xs);
-}
-
 /* --- Sidebar / TOC --- */
 .article-layout {
   display: grid;
@@ -1197,7 +1174,6 @@ img {
   .site-header,
   .site-footer,
   .scroll-top,
-  .ad-slot,
   .hero-canvas {
     display: none !important;
   }

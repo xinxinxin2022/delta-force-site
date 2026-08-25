@@ -4,7 +4,6 @@ import HeroSection from '../components/HeroSection.astro';
 import SearchBar from '../components/SearchBar.astro';
 import FilterBar from '../components/FilterBar.astro';
 import ArticleCard from '../components/ArticleCard.astro';
-import AdSlot from '../components/AdSlot.astro';
 import { getCollection } from 'astro:content';
 
 const articles = await getCollection('articles');
@@ -32,7 +31,6 @@ const categories = [
   </section>
   <section class="container" id="articles">
     <FilterBar categories={categories} />
-    <AdSlot position="header" />
     <div class="articles-grid">
       {all.map((entry) => <ArticleCard entry={entry} />)}
     </div>

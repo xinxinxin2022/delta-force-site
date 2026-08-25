@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import AdSlot from '../components/AdSlot.astro';
 
 const faqItems = [
   { q: "What is Delta Force: Hawk Ops?", a: "Delta Force: Hawk Ops is a free-to-play tactical first-person shooter developed by Team Jade and published by Garena. It features multiple game modes including Havoc Operations (extraction/PvE), All-Out Warfare (32v32 large-scale battles), and supports both solo and squad gameplay across diverse maps and environments." },
@@ -53,8 +52,6 @@ const faqJsonLd = {
     </div>
 
     <div class="article-content">
-      <AdSlot position="header" />
-
       <div class="faq-section">
         <h2>General Questions</h2>
         {faqItems.slice(0, 3).map((item, i) => (
@@ -129,8 +126,6 @@ const faqJsonLd = {
           </div>
         ))}
       </div>
-
-      <AdSlot position="bottom" />
     </div>
   </main>
 

@@ -1,7 +1,6 @@
 ---
 import { IMAGE_BASE_URL } from '../lib/constants.ts';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import AdSlot from '../components/AdSlot.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
 
@@ -46,7 +45,6 @@ const mapArticles = articles.filter(a => a.data.category === 'map');
     <div class="container">
       <h2 class="section-title">Map Guides</h2>
       <p class="section-lead">Complete guides for every map in Delta Force: Hawk Ops.</p>
-      <AdSlot position="in-article" />
       <div class="articles-grid">
         {mapArticles.map(entry => <ArticleCard entry={entry} />)}
       </div>
