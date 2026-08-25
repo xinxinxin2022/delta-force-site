@@ -11,4 +11,4 @@ Disallow: /private/
 Disallow: /.well-known/
 
 # Sitemap
-Sitemap: https://game-delta.asia/sitemap.xml
+Sitemap: https://game-delta.asia/sitemap-index.xml
